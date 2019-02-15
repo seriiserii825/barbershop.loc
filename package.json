@@ -1,5 +1,5 @@
 {
-  "name": "start-template.loc",
+  "name": "barbershop.loc",
   "version": "1.0.0",
   "main": "original_gulpfile.js",
   "dependencies": {
