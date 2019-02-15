@@ -1,0 +1,47 @@
+// @import "../libs/reset.scss/reset.scss"
+@import 'partials/fonts';
+@import 'partials/variables';
+@import 'partials/mixins';
+
+
+body {
+  background: $gray;
+  color: $accent;
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+
+.container {
+  border: 1px solid $gray-dark;
+  margin: 0 auto;
+  max-width: 1200px;
+  min-height: 100vh;
+}
