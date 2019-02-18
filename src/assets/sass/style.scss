@@ -43,4 +43,60 @@ a {
   max-width: 1200px;
 }
 
-@import 'blocks/page-header.scss';
+//page-header
+.page-header {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.page-header__logo {
+  background: $black-lighter-color;
+  padding: 29px 50px;
+}
+
+.main-nav {
+  &__header {
+    background: $accent-color;
+    color: $white-color;
+    font-size: $regular-size;
+    height: 50px;
+    line-height: 50px;
+    position: relative;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__toggle {
+    background: $accent-dark-color;
+    border: none;
+    height: 100%;
+    outline: none;
+    padding: 15px 17px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 70px;
+
+      span {
+        background: $white-color;
+        display: block;
+        height: 2px;
+        position: relative;
+        width: 36px;
+
+        &:first-child {
+          top: -6px;
+        }
+
+        &:nth-child(2) {
+        }
+
+        &:last-child {
+          bottom: -6px;
+        }
+      }
+  }
+  //main-nav__header
+}
+//main-nav
