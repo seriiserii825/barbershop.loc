@@ -40,7 +40,18 @@ a {
 
 .container {
   margin: 0 auto;
-  max-width: 1200px;
+  padding: 0 20px;
+  min-width: 280px;
+
+  @media screen and (min-width: $md) {
+    padding: 0 64px;
+  }
+
+  @media screen and (min-width: $xl) {
+    padding: 0 120px;
+    min-width: auto;
+    max-width: 1200px;
+  }
 }
 
 //page-header
@@ -53,9 +64,66 @@ a {
 .page-header__logo {
   background: $black-lighter-color;
   padding: 29px 50px;
+  text-align: center;
+
+  @media screen and (min-width: $md) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 57px;
+    height: 397px;
+    text-align: center;
+    background: url("../i/header-bg.jpg") no-repeat center;
+    background-size: cover;
+    order: 2;
+  }
+
+  @media screen and (min-width: $xl) {
+    height: 648px;
+  }
+
+  img:first-child {
+    display: none;
+
+    @media screen and (min-width: $md) {
+      display: inline-block;
+      margin-bottom: 16px;
+    }
+  }
+
+  img:nth-child(2) {
+    @media screen and (min-width: $md) {
+      width: 376px;
+      height: auto;
+    }
+  }
+
+  img:last-child {
+    display: none;
+  }
 }
 
 .main-nav {
+  @media screen and (min-width: $md) {
+    background: $black-color;
+  }
+
+  &__wrapper {
+    @media screen and (min-width: $md) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .container {
+    padding: 0;
+    min-width: auto;
+
+    @media screen and (min-width: $md) {
+      padding: 0 64px;
+    }
+  }
+
   &__header {
     position: relative;
     height: 50px;
@@ -65,6 +133,11 @@ a {
     text-transform: uppercase;
     color: $white-color;
     background: $accent-color;
+
+    @media screen and (min-width: $md) {
+      display: none;
+    }
+
   }
 
   &__toggle {
@@ -97,3 +170,83 @@ a {
   //main-nav__header
 }
 //main-nav
+
+.site-list {
+  &__item {
+    padding-left: 90px;
+    height: 50px;
+    line-height: 50px;
+    text-transform: uppercase;
+    color: $white-color;
+    background: $accent-color;
+    border-top: 1px solid $accent-color-lightnest;
+    border-bottom: 1px solid $accent-color-darknest;
+
+    @media screen and (min-width: $md) {
+      display: inline-block;
+      margin-right: 32px;
+      padding-left: 0;
+      height: 72px;
+      line-height: 72px;
+      background: $black-color;
+      border: none;
+    }
+
+    @media screen and (min-width: $xl) {
+      margin-right: 64px;
+    }
+
+    &--active {
+      @media screen and (min-width: $md) {
+        position: relative;
+      }
+
+      &::after {
+        @media screen and (min-width: $md) {
+          content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            display: block;
+            width: 100%;
+            height: 3px;
+            background: $accent-color;
+          }
+      }
+    }
+
+    a {
+      display: block;
+      color: inherit;
+      background: inherit;
+    }
+
+  }
+}
+
+.user-list {
+  padding-left: 90px;
+  background: $accent-dark-color;
+
+  @media screen and (min-width: $md) {
+    padding-left: 0;
+    height: 72px;
+    line-height: 72px;
+    background: $black-color;
+  }
+
+  &__login {
+    display: block;
+    padding: 17px 0;
+    color: $white-color;
+
+    @media screen and (min-width: $md) {
+      padding: 0;
+    }
+
+    svg {
+      margin-right: 17px;
+    }
+  }
+}
+
