@@ -7,3 +7,14 @@
 //          url('../fonts/intro.ttf') format('truetype'),
 //          url('../fonts/intro.svg#8289') format('svg');
 // }
+
+@font-face {
+  font-family: 'PT Sans Narrow';
+  src: url('PTSans-Narrow.eot');
+  src: local('PT Sans Narrow'),
+    url('PTSans-Narrow.eot?#iefix') format('embedded-opentype'),
+    url('PTSans-Narrow.woff') format('woff'),
+    url('PTSans-Narrow.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

@@ -4,8 +4,14 @@ $md: 768px;
 $lg: 992px;
 $xl: 1200px;
 
-$accent: #009adf;
-$gray: #999;
-$gray-dark: #666;
-$text-color: #333;
-$body-bg: #ccc;
+$accent-color: #826550;
+$accent-dark-color: #6a4d38;
+$black-color: #000;
+$black-lighter-color: #242424;
+$white-color: #fff;
+$white-darken-color: #f7f4f1;
+$gray-color: #404040;
+$gray-light-color: #4e4e4e;
+
+$text-color: $black-color;
+$body-bg: $white;

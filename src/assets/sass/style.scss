@@ -5,17 +5,16 @@
 
 
 body {
+  @include ptsans;
   background: $body-bg;
   color: $text-color;
-  font-family: 'Roboto', sans-serif;
+  font-size: 18px;
   margin: 0;
   padding: 0;
 }
 
 ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
+  @include reset-list;
 }
 
 h1,
@@ -42,5 +41,4 @@ a {
 .container {
   margin: 0 auto;
   max-width: 1200px;
-  min-height: 100vh;
 }
