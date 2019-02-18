@@ -66,8 +66,8 @@ gulp.task("favicon", function(){
 /* fonts:build
 ====================================================*/
 gulp.task("fonts", function(){
-  return gulp.src('src/assets/fonts/')
-      .pipe(gulp.dest('build/fonts'))
+  return gulp.src('src/assets/fonts/**/*.*')
+      .pipe(gulp.dest('build/assets/fonts'))
   .on('end', browserSync.reload);
 });
 

@@ -1,0 +1,17 @@
+.page-header {
+  display: flex;
+  flex-direction: column;
+
+}
+
+.page-header__logo {
+  background: $black-lighter-color;
+  padding: 29px 50px;
+}
+
+.main-nav {
+  &__toggle {
+    background: $accent-color;
+  }
+}
+
