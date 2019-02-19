@@ -1,7 +1,7 @@
 'use strict';
 
 let gulp = require('gulp'),
-sass = require('gulp-sass'),
+less = require('gulp-less'),
 pug = require('gulp-pug'),
 autoprefixer = require("gulp-autoprefixer"),
 sourcemaps = require('gulp-sourcemaps'),
@@ -32,11 +32,9 @@ gulp.task('pug', function(){
 //=======================
 
 gulp.task("css", function(){
-	return gulp.src('src/assets/sass/**/*.scss')
-	.pipe(gp.sourcemaps.init())
-	.pipe(sass({outputStyle: 'expanded'}).on('error', notify.onError(function (error) {
-		return 'An error occurred while compiling sass.\nLook in the console for details.\n' + error;
-	})))
+	return gulp.src('src/assets/less/**/*.less')
+  .pipe(gp.sourcemaps.init())
+  .pipe(gp.less())
 	.pipe(gp.plumber())
 	.pipe(gp.autoprefixer({
 		cascade: false
@@ -99,7 +97,7 @@ gulp.task("clean", function(cb){
 });
 
 gulp.task("watch", function(){
-  gulp.watch('src/assets/sass/**/*.scss', gulp.series('css'));
+  gulp.watch('src/assets/less/**/*.less', gulp.series('css'));
   gulp.watch('src/pug/**/*.pug', gulp.series('pug'));
   gulp.watch('src/assets/js/**/*.js', gulp.series('js'));
   gulp.watch(['src/assets/i/**/*.*'], function(event, cb){

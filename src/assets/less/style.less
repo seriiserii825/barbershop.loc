@@ -1,20 +1,16 @@
 // @import "../libs/reset.scss/reset.scss"
-@import 'partials/fonts';
-@import 'partials/variables';
-@import 'partials/mixins';
+@import 'partials/_fonts.less';
+@import 'partials/_variables.less';
+@import 'partials/_mixins.less';
 
 
 body {
-  @include ptsans;
-  background: $body-bg;
-  color: $text-color;
+  background:@body-bg;
+  color: @text-color;
+  .ptsans;
   font-size: 18px;
   margin: 0;
   padding: 0;
-}
-
-ul {
-  @include reset-list;
 }
 
 h1,
@@ -43,73 +39,26 @@ a {
   padding: 0 20px;
   min-width: 280px;
 
-  @media screen and (min-width: $md) {
+  @media screen and (min-width: @md) {
     padding: 0 64px;
   }
 
-  @media screen and (min-width: $xl) {
+  @media screen and (min-width: @xl) {
     padding: 0 120px;
     min-width: auto;
     max-width: 1200px;
   }
 }
 
-//page-header
-.page-header {
-  display: flex;
-  flex-direction: column;
-
-}
-
-.page-header__logo {
-  background: $black-lighter-color;
-  padding: 29px 50px;
-  text-align: center;
-
-  @media screen and (min-width: $md) {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding-top: 57px;
-    height: 397px;
-    text-align: center;
-    background: #000 url("../i/header-bg.jpg") no-repeat center;
-    background-size: cover;
-    order: 2;
-  }
-
-  @media screen and (min-width: $xl) {
-    height: 648px;
-  }
-
-  img:first-child {
-    display: none;
-
-    @media screen and (min-width: $md) {
-      display: inline-block;
-      margin-bottom: 16px;
-    }
-  }
-
-  img:nth-child(2) {
-    @media screen and (min-width: $md) {
-      width: 376px;
-      height: auto;
-    }
-  }
-
-  img:last-child {
-    display: none;
-  }
-}
+@import "blocks/page-header.less";
 
 .main-nav {
-  @media screen and (min-width: $md) {
-    background: $black-color;
+  @media screen and (min-width: @md) {
+    background: @black-color;
   }
 
   &__wrapper {
-    @media screen and (min-width: $md) {
+    @media screen and (min-width: @md) {
       display: flex;
       justify-content: space-between;
     }
@@ -119,7 +68,7 @@ a {
     padding: 0;
     min-width: auto;
 
-    @media screen and (min-width: $md) {
+    @media screen and (min-width: @md) {
       padding: 0 64px;
     }
   }
@@ -128,13 +77,13 @@ a {
     position: relative;
     height: 50px;
     line-height: 50px;
-    font-size: $regular-size;
+    font-size: @regular-size;
     text-align: center;
     text-transform: uppercase;
-    color: $white-color;
-    background: $accent-color;
+    color: @white-color;
+    background: @accent-color;
 
-    @media screen and (min-width: $md) {
+    @media screen and (min-width: @md) {
       display: none;
     }
 
@@ -147,7 +96,7 @@ a {
     padding: 15px 17px;
     width: 70px;
     height: 100%;
-    background: $accent-dark-color;
+    background: @accent-dark-color;
     border: none;
     outline: none;
 
@@ -156,7 +105,7 @@ a {
         display: block;
         width: 36px;
         height: 2px;
-        background: $white-color;
+        background: @white-color;
 
         &:first-child {
           top: -6px;
@@ -177,32 +126,32 @@ a {
     height: 50px;
     line-height: 50px;
     text-transform: uppercase;
-    color: $white-color;
-    background: $accent-color;
-    border-top: 1px solid $accent-color-lightnest;
-    border-bottom: 1px solid $accent-color-darknest;
+    color: @white-color;
+    background: @accent-color;
+    border-top: 1px solid @accent-color-lightnest;
+    border-bottom: 1px solid @accent-color-darknest;
 
-    @media screen and (min-width: $md) {
+    @media screen and (min-width: @md) {
       display: inline-block;
       margin-right: 32px;
       padding-left: 0;
       height: 72px;
       line-height: 72px;
-      background: $black-color;
+      background: @black-color;
       border: none;
     }
 
-    @media screen and (min-width: $xl) {
+    @media screen and (min-width: @xl) {
       margin-right: 64px;
     }
 
     &--active {
-      @media screen and (min-width: $md) {
+      @media screen and (min-width: @md) {
         position: relative;
       }
 
       &::after {
-        @media screen and (min-width: $md) {
+        @media screen and (min-width: @md) {
           content: '';
             position: absolute;
             bottom: 0;
@@ -210,7 +159,7 @@ a {
             display: block;
             width: 100%;
             height: 3px;
-            background: $accent-color;
+            background: @accent-color;
           }
       }
     }
@@ -226,21 +175,21 @@ a {
 
 .user-list {
   padding-left: 90px;
-  background: $accent-dark-color;
+  background: @accent-dark-color;
 
-  @media screen and (min-width: $md) {
+  @media screen and (min-width: @md) {
     padding-left: 0;
     height: 72px;
     line-height: 72px;
-    background: $black-color;
+    background: @black-color;
   }
 
   &__login {
     display: block;
     padding: 17px 0;
-    color: $white-color;
+    color: @white-color;
 
-    @media screen and (min-width: $md) {
+    @media screen and (min-width: @md) {
       padding: 0;
     }
 

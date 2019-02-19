@@ -9,5 +9,5 @@
       "custom-properties",
       "declarations"
   ],
-  "order/properties-alphabetical-order": null,
+  "order/properties-alphabetical-order": true,
   "at-rule-no-unknown": [true, { "ignoreAtRules": ["function", "if", "each", "include", "mixin"] }] } }
