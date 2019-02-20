@@ -12,44 +12,39 @@ block content
       img(src="assets/i/logotype-mobile.svg" alt="Барбершоп «Бородинский»")
       img(src="assets/i/logo-bottom.png" alt="Барбершоп «Бородинский»")
 
-    nav.main-nav
-      .main-nav__header Главная
-        button.main-nav__toggle(type="button")
-          span
-          span
-          span
+    nav.main-nav.main-nav--opened.main-nav--no-js
+      button.main-nav__toggle(type="button")
+        span.visually-hidden Открыть меню
 
-      .container
-        .main-nav__wrapper
-          ul.main-nav__list.site-list
-            block main-nav
-              li.site-list__item.site-list__item--active
-                a(href="#") Главная
-              li.site-list__item
-                a(href="our-works.html") Наши работы
-              li.site-list__item
-                a(href="#") Записаться
-              li.site-list__item
-                a(href="form.html") Контакты
-              li.site-list__item
-                a(href="#") Html Academy
+      .main-nav__wrapper
+        ul.main-nav__list.site-list
+          block main-nav
+            li.site-list__item.site-list__item--active
+              a Главная
+            li.site-list__item
+              a(href="our-works.html") Наши работы
+            li.site-list__item
+              a(href="#") Записаться
+            li.site-list__item
+              a(href="form.html") Контакты
+            li.site-list__item
+              a(href="#") Html Academy
 
-          ul.main-nav__list.user-list
-            li.user-list__item
-              a.user-list__login(href="login.html")
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="16" height="16" viewBox="0 0 16 16"><g><g opacity=".3" transform="translate(-90 -357)"><image width="16" height="16" transform="translate(90 357)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABCUlEQVQ4T6WTPUoEQRCFv6cTGAiCgoGC4iqYyyZmepHFaC/haUQTE4+wBzARIwVR9gS7LoggqE9qdxyGYbvHn4IJerrq63qvq0UibC8CQ2ADUCMt1i/ApLlR5ZWANyBAyUgCosL2LrAEfDQIn8AgussCcifbvgf2cxK2gK6kq3kg249Ap02CgTNJJ01IBSjNWgBC13dEYXxjYAU4l9SrQ+qAaCWS6kZFcXS3ChRl4QXQkxR7YfBMgu3pjx/ELXAgadppHXCUuetLYA24Aw4lTSqNvzDxGjiW9DrXg8wobwN9Sad/ukbbhaT3zAEPwN5/JvEJ2Gl7TDfAZmJG1qO7NsAzsJyQEaaOvgCFnXuZT4s+wgAAAABJRU5ErkJggg=="/></g></g></svg>
-                | Войти
-
+        ul.main-nav__list.user-list
+          li.user-list__item
+            a.user-list__login(href="login.html")
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" class="user-list__login-icon" width="16" height="16" viewBox="0 0 16 16"><g><g opacity=".3" transform="translate(-90 -357)"><image width="16" height="16" transform="translate(90 357)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABCUlEQVQ4T6WTPUoEQRCFv6cTGAiCgoGC4iqYyyZmepHFaC/haUQTE4+wBzARIwVR9gS7LoggqE9qdxyGYbvHn4IJerrq63qvq0UibC8CQ2ADUCMt1i/ApLlR5ZWANyBAyUgCosL2LrAEfDQIn8AgussCcifbvgf2cxK2gK6kq3kg249Ap02CgTNJJ01IBSjNWgBC13dEYXxjYAU4l9SrQ+qAaCWS6kZFcXS3ChRl4QXQkxR7YfBMgu3pjx/ELXAgadppHXCUuetLYA24Aw4lTSqNvzDxGjiW9DrXg8wobwN9Sad/ukbbhaT3zAEPwN5/JvEJ2Gl7TDfAZmJG1qO7NsAzsJyQEaaOvgCFnXuZT4s+wgAAAABJRU5ErkJggg=="/></g></g></svg>
+              | Войти
       //main-nav__wrapper
     //main-nav
   //page-header
 
   main.page-main
-    h1.visualy-hidden Барбершоп «Бородинский» — истинно мужская классика
+    h1.visually-hidden Барбершоп «Бородинский» — истинно мужская классика
 
     section.stats
       header.stats__header
-        h2.visualy-hidden Статистика Барбершопа
+        h2.visually-hidden Статистика Барбершопа
         b.stats__slogan Стрижка у нас это выгодно!
         p.stats__intro Мужская стрижка требует точного подхода. Обратимся к статистике:
         |
