@@ -57,12 +57,11 @@ $(function () {
 
   $('.slider__list').slick({
     dots: true,
-    arrows: false,
+    arrows: true,
     responsive: [{
       slidesToShow: 1,
       slidesToScroll: 1,
       dots: true,
-      arrows: true
     },
     {
       breakpoint: 767,

@@ -1,5 +1,4 @@
 @import "../partials/_variables.scss";
-
 .reviews {
   position: relative;
   margin: 0 auto;
@@ -7,11 +6,15 @@
   width: 320px;
   background: #fff;
   border-bottom: 1px solid #353535;
-
   @media screen and (min-width: $md) {
+    padding-bottom: 70px;
     width: 640px;
   }
-
+  @media screen and (min-width: $xl) {
+    margin-bottom: 40px;
+    padding-bottom: 100px;
+    width: 960px;
+  }
   &::after {
     content: '';
     position: absolute;
@@ -25,12 +28,10 @@
     border-left-width: 160px;
     border-right-width: 160px;
     z-index: 82;
-
     @media screen and (min-width: $md) {
       display: none;
     }
   }
-
   &::before {
     content: '';
     position: absolute;
@@ -41,25 +42,158 @@
     height: 40px;
     background: #292929;
     z-index: 80;
-  }
-
-  .reviews__header {
-    padding-top: 30px;
-
     @media screen and (min-width: $md) {
-      display: flex;
-      justify-content: space-between;
-      padding-left: 20px;
-      padding-right: 20px;
+      display: none;
     }
   }
+  .slick-dots {
+    margin-bottom: 20px;
+    @media screen and (min-width: $md) {
+      left: 50%;
+      bottom: -10px;
+      transform: translate(-50%, 0);
+      display: table;
+      padding-left: 25px;
+      padding-right: 25px;
+      width: auto;
+      background: #fff;
+    }
+    @media screen and (min-width: $xl) {
+      bottom: -75px;
+    }
+    li {
+      border: 1px solid #000;
+      &.slick-active {
+        background: #000;
+      }
+    }
+  }
+  .slick-arrow {
+    z-index: 1100;
 
+    @media screen and (min-width: $md) {
+      width: 50px;
+      height: 84%;
+      background: #fff;
+      border: 1px solid #e5ddd5;
+    }
+
+    @media screen and (min-width: $xl) {
+      top: 100px;
+      height: 100%;
+    }
+
+    &::before{
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      display: block;
+      border: 6px solid transparent;
+    }
+  }
+  .slick-prev {
+    @media screen and (min-width: $md) {
+      left: 21px;
+    }
+    @media screen and (min-width: $xl) {
+      left: -36px;
+    }
+    &::before {
+      left: 50%;
+      border-right-width: 12px;
+      border-right-color: #000;
+    }
+  }
+  .slick-next {
+    @media screen and (min-width: $md) {
+      right: 21px;
+    }
+    @media screen and (min-width: $xl) {
+      right: -40px;
+    }
+    &::before {
+      right: 18%;
+      border-left-width: 12px;
+      border-left-color: #000;
+    }
+  }
   .reviews__item {
     display: flex;
     justify-content: space-between;
+
+    @media screen and (min-width: $md) {
+      justify-content: center;
+      padding-top: 36px;
+      padding-bottom: 20px;
+      padding-left: 34px;
+      padding-right: 20px;
+      border: 1px solid #e5ddd5;
+      border-left: none;
+      border-right: none;
+      overflow: hidden;
+    }
+    @media screen and (min-width: $xl) {
+      justify-content: flex-start;
+      padding: 0;
+      height: 160px;
+      border: 1px solid #e5ddd5;
+    }
+  }
+
+  .reviews__list {
+    @media screen and (min-width: $md) {
+      position: relative;
+      margin: 0 auto;
+      width: 560px;
+    }
+    @media screen and (min-width: $xl) {
+      width: 714px;
+      height: 160px;
+    }
+
+    &::after,
+    &::before {
+      @media screen and (min-width: $md) {
+        content: '';
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 19px;
+        height: 84%;
+        background: #fff;
+        z-index: 2000;
+      }
+      @media screen and (min-width: $xl) {
+        display: none;
+      }
+    }
+    &::after {
+      @media screen and (min-width: $md) {
+        left: 2px;
+      }
+    }
+    &::before {
+      @media screen and (min-width: $md) {
+        right: 2px;
+      }
+    }
   }
 }
 
+.reviews__header {
+  padding-top: 30px;
+  @media screen and (min-width: $md) {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  @media screen and (min-width: $xl) {
+    margin: 0 auto;
+    width: 794px;
+  }
+}
 
 .reviews__title {
   margin-bottom: 35px;
@@ -67,7 +201,6 @@
   line-height: 1;
   text-transform: uppercase;
   text-align: center;
-
   @media screen and (min-width: $md) {
     font-size: 40px;
   }
@@ -75,11 +208,37 @@
 
 .reviews__content {
   width: 190px;
+  @media screen and (min-width: $md) {
+    width: 345px;
+  }
+  @media screen and (min-width: $xl) {
+    padding-top: 36px;
+  }
+}
+
+.reviews__text {
+  @media screen and (min-width: $md) {
+    height: 69px;
+  }
+  @media screen and (min-width: $xl) {
+    margin-top: 0;
+  }
 }
 
 .reviews__author-picture {
-  margin-top: 0;
+  margin-top: 5px;
   margin-right: 20px;
+  @media screen and (min-width: $xl) {
+    margin-right: 70px;
+    width: 250px;
+  }
+
+  img {
+    @media screen and (min-width: $xl) {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .reviews__author-name {
@@ -87,23 +246,16 @@
   line-height: 27px;
   font-style: normal;
   font-weight: bold;
+  @media screen and (min-width: $xl) {
+    display: block;
+    margin-bottom: 10px;
+  }
 }
 
 .reviews__write {
   display: none;
-
   @media screen and (min-width: $md) {
     display: block;
   }
 }
 
-
-.slick-dots {
-  margin-bottom: 20px;
-  li {
-    border: 1px solid #000;
-    &.slick-active {
-      background: #000;
-    }
-  }
-}

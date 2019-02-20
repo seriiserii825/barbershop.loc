@@ -53,6 +53,9 @@
     text-align: left;
     padding-left: 20px;
   }
+  @media screen and (min-width: $xl) {
+    padding-left: 86px;
+  }
 }
 
 .news__list {
@@ -125,6 +128,9 @@
     justify-content: flex-end;
     margin: 0;
     padding-right: 20px;
+  }
+  @media screen and (min-width: $xl) {
+    padding-right: 86px;
   }
 
   button {
