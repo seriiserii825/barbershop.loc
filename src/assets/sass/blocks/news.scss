@@ -49,6 +49,9 @@
 
   @media screen and (min-width: $md) {
     margin-bottom: 54px;
+    font-size: 40px;
+    text-align: left;
+    padding-left: 20px;
   }
 }
 
@@ -112,7 +115,21 @@
     line-height: 0.8;
   }
 
-  .news__button {
-    grid-area: news-button;
+}
+
+.button__wrap {
+  grid-area: news-button;
+
+  @media screen and (min-width: $md) {
+    display: flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding-right: 20px;
+  }
+
+  button {
+    @media screen and (min-width: $md) {
+      display: block;
+    }
   }
 }

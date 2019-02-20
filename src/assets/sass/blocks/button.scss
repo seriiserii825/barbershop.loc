@@ -12,6 +12,10 @@
   color: #000;
   border: 1px solid #e5ddd5;
 
+  &--small {
+    width: 160px;
+  }
+
   &__wrap {
     display: table;
     margin: 0 auto;

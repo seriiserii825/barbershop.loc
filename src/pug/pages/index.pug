@@ -131,16 +131,17 @@ block content
         |
         |
         .button__wrap.news__button
-          a.news__to-all.button(href="#") Показать все
+          a.news__to-all.button(href="#").button--small Показать все
       //.news__wrapper
     //section.news
 
     section.reviews
       .reviews__wrapper.slider
-        h2.reviews__title Отзывы о нас
-        |
-        |
-        a.reviews__write.button(href="#") Оставить свой
+        .reviews__header
+          h2.reviews__title Отзывы о нас
+          |
+          |
+          a.reviews__write.button(href="#").button--small Оставить свой
         .reviews__list.slider__list
           blockquote.reviews__item.slider__item
             p.reviews__author-picture

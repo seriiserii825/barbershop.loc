@@ -59,15 +59,15 @@ $(function () {
     dots: true,
     arrows: false,
     responsive: [{
-      breakpoint: 1980,
-      settings: "unslick" // destroys slick,
+      slidesToShow: 1,
+      slidesToScroll: 1,
+      dots: true,
+      arrows: true
     },
     {
       breakpoint: 767,
       settings: {
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        dots: true
+        arrows: false
       },
     }
   ]

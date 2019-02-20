@@ -53,6 +53,7 @@ a {
   overflow: hidden;
 }
 
+@import "blocks/button.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/site-list.scss";
@@ -60,5 +61,4 @@ a {
 @import "blocks/stats.scss";
 @import "blocks/advantages.scss";
 @import "blocks/news.scss";
-@import "blocks/button.scss";
 @import "blocks/reviews.scss";
