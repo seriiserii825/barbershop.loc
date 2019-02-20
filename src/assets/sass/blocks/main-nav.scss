@@ -16,7 +16,7 @@
     width: 36px;
     height: 2px;
     background: $white-color;
-    box-shadow: 0 8px 0 0 $white-color, 0 16px 0 0 @white-color;
+    box-shadow: 0 8px 0 0 $white-color, 0 16px 0 0 $white-color;
   }
 
   &__toggle {
@@ -31,7 +31,7 @@
     z-index: 2;
     cursor: pointer;
 
-    @media screen and (min-width: @md) {
+    @media screen and (min-width: $md) {
       display: none;
     }
 
@@ -103,14 +103,14 @@
   }
 
   &__wrapper {
-    @media screen and (min-width: @md) {
+    @media screen and (min-width: $md) {
       display: flex;
       justify-content: space-between;
       margin: 0 auto;
       width: 640px;
     }
 
-    @media screen and (min-width: @xl) {
+    @media screen and (min-width: $xl) {
       width: 960px;
     }
   }
@@ -163,7 +163,7 @@
     }
   }
 
-  @media screen and (min-width: @md) {
+  @media screen and (min-width: $md) {
     margin: 0;
     width: auto;
     background: $black-color;

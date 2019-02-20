@@ -19,18 +19,18 @@
       background-size: cover;
       order: 2;
     }
-    @media screen and (min-width: @xl) {
+    @media screen and (min-width: $xl) {
       height: 648px;
     }
     img:first-child {
       display: none;
-      @media screen and (min-width: @md) {
+      @media screen and (min-width: $md) {
         display: inline-block;
         margin-bottom: 16px;
       }
     }
     img:nth-child(2) {
-      @media screen and (min-width: @md) {
+      @media screen and (min-width: $md) {
         width: 376px;
         height: auto;
       }

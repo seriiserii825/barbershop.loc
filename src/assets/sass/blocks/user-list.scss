@@ -1,4 +1,4 @@
-@import "../partials/_variables.less";
+@import "../partials/_variables.scss";
 
 .user-list {
   &__login {
@@ -24,16 +24,16 @@
     }
   }
 
-  @media screen and (min-width: @md) {
+  @media screen and (min-width: $md) {
     width: 60px;
   }
 
-  @media screen and (min-width: @xl) {
+  @media screen and (min-width: $xl) {
     width: 160px;
   }
 }
 
-@media screen and (min-width: @md) {
+@media screen and (min-width: $md) {
   .user-list {
     &__login {
       padding: 0;
@@ -54,7 +54,7 @@
   }
 }
 
-@media screen and (min-width: @xl) {
+@media screen and (min-width: $xl) {
   .user-list {
     max-width: 160px;
     width: auto;
