@@ -169,25 +169,29 @@ block content
   footer.page-footer
     .page-footer__wrapper
       .page-footer__contacts.contacts
-        h3.contacts__title Барбершоп «Бородинский»
-        p.contacts__text
+        h3.page-footer__title.contacts__title Барбершоп «Бородинский»
+        p.page-footer__text.contacts__text
           | г. Санкт-Петербург, ул. Большая Конюшенная 19/8
         |
         |
+        a.button.contacts__phone-button(href="tel:+78125556666") +7 (812) 555-66-66
         a.contacts__phone(href="tel:+78125556666")
           <span>Тел.:</span>  +7 (812) 555-66-66
       .page-footer__social.social
         h3.social__title Давайте дружить!
         ul.social__list
           li.social__item
-            a.social__link.social__link--vk(href="#") Мы в Вконтакте
+            a.social__link.social__link--vk(href="#")
+              img.social-vk(src="assets/i/social/vk-icon-big.png")
           li.social__item
-            a.social__link.social__link--facebook(href="#") Мы в фейсбуке
+            a.social__link.social__link--facebook(href="#")
+              img.social-fb(src="assets/i/social/facebook-icon-big.png")
           li.social__item
-            a.social__link.social__link--instagram(href="#") Мы в Инстаграме
+            a.social__link.social__link--instagram(href="#")
+              img.social-inst(src="assets/i/social/insta-icon-big.png")
       .page-footer__copyright.copyright
         h3.copyright__title Разработано:
-        a.copyright__link.button(href="#") HTML Academy
+        a.copyright__link.page-footer__copyright-button.button(href="#") HTML Academy
   //footer.page-footer
   |
   |

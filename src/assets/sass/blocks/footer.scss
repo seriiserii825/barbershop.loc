@@ -1,0 +1,121 @@
+@import "../partials/variables.scss";
+
+.page-footer {
+  margin: 0 auto;
+  padding: 80px 0 24px 0;
+  width: 320px;
+  color: #fff;
+  background: #292929;
+  @media screen and (min-width: $md) {
+    padding-left: 70px;
+    padding-right: 70px;
+    width: 640px;
+  }
+  @media screen and (min-width: $xl) {
+    width: 960px;
+  }
+
+  .social__item {
+    @media screen and (min-width: $xl) {
+      width: 50px;
+      height: 50px;
+    }
+  }
+}
+
+.page-footer__title {
+  margin-bottom: 20px;
+  text-align: center;
+  @media screen and (min-width: $md) {
+    text-align: left;
+  }
+}
+.page-footer__text {
+  margin: 0 auto 22px;
+  width: 204px;
+  @media screen and (min-width: $md) {
+    margin: 0;
+    width: auto;
+    text-align: left;
+  }
+}
+.contacts__phone {
+  display: none;
+  @media screen and (min-width: $md) {
+    display: block;
+    color: #fff;
+    text-align: left;
+  }
+}
+.contacts__phone-button {
+  margin-bottom: 26px;
+  color: #fff;
+  @media screen and (min-width: $md) {
+    display: none;
+  }
+}
+
+.page-footer__wrapper {
+  @media screen and (min-width: $md) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @media screen and (min-width: $xl) {
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+}
+
+.page-footer__contacts {
+  flex-basis: 320px;
+  text-align: left;
+  @media screen and (min-width: $md) {
+    margin-bottom: 50px;
+    margin-right: 160px;
+  }
+  @media screen and (min-width: $xl) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  .contacts__phone-button {
+    display: block;
+    margin: 0 auto 25px;
+    @media screen and (min-width: $md) {
+      display: none;
+    }
+  }
+}
+
+.page-footer__copyright {
+  @media screen and (min-width: $md) {
+    order: 2;
+  }
+  @media screen and (min-width: $xl) {
+    order: 3;
+  }
+}
+.page-footer__copyright-button {
+  @media screen and (min-width: $md) {
+    width: 158px;
+  }
+}
+.page-footer__social {
+  @media screen and (min-width: $md) {
+    order: 3;
+    flex-grow: 1;
+  }
+  @media screen and (min-width: $xl) {
+    order: 2;
+    flex-grow: initial;
+    width: 164px;
+  }
+
+  .social__list {
+    @media screen and (min-width: $xl) {
+      margin-bottom: 0;
+      height: auto;
+    }
+  }
+}
+
