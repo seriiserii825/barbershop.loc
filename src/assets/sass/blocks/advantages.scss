@@ -7,23 +7,23 @@
   background: $black-lighter-color;
 
   &::after {
-      content: '';
-      position: absolute;
-      bottom: -68px;
-      left: 0;
-      right: 0;
-      display: block;
-      height: 0;
-      border: 34px solid transparent;
-      border-top-color: $black-lighter-color;
-      border-left-width: 160px;
-      border-right-width: 160px;
+    content: '';
+    position: absolute;
+    bottom: -68px;
+    left: 0;
+    right: 0;
+    display: block;
+    height: 0;
+    border: 34px solid transparent;
+    border-top-color: $black-lighter-color;
+    border-left-width: 160px;
+    border-right-width: 160px;
 
-      @media screen and (min-width: $md) {
-        display: none;
-      }
+    @media screen and (min-width: $md) {
+      display: none;
     }
   }
+}
 
 .advantages__relative {
   position: relative;
