@@ -1,13 +1,12 @@
 // @import "../libs/reset.scss/reset.scss"
-@import 'partials/_fonts.less';
-@import 'partials/_variables.less';
-@import 'partials/_mixins.less';
+@import 'partials/_fonts.scss';
+@import 'partials/_variables.scss';
+@import 'partials/_mixins.scss';
 
 
 body {
-  background:@body-bg;
-  color: @text-color;
-  .ptsans;
+  background:$body-bg;
+  color: $text-color;
   font-size: 18px;
   margin: 0;
   padding: 0;

@@ -1,11 +1,11 @@
-@import "../partials/_variables.less";
+@import "../partials/_variables.scss";
 
 .page-header {
   display: flex;
   flex-direction: column;
 
   &__logo {
-    background: @black-lighter-color;
+    background: $black-lighter-color;
     padding: 29px 50px;
     text-align: center;
     @media screen and (min-width: @md) {

@@ -1,13 +1,12 @@
-@import "../partials/_variables.less";
-@import "../partials/_mixins.less";
+@import "../partials/_variables.scss";
+@import "../partials/_mixins.scss";
 
 .main-nav {
   position: relative;
   margin: 0 auto;
   width: 320px;
   min-height: 51px;
-  background: @accent-color;
-
+  background: $accent-color;
 
   &--closed .main-nav__toggle::before {
     content: '';
@@ -16,9 +15,63 @@
     left: 17px;
     width: 36px;
     height: 2px;
-    background: @white-color;
-    box-shadow: 0 8px 0 0 @white-color, 0 16px 0 0 @white-color;
+    background: $white-color;
+    box-shadow: 0 8px 0 0 $white-color, 0 16px 0 0 @white-color;
   }
+
+  &__toggle {
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 70px;
+    height: 50px;
+    background: $accent-dark-color;
+    border: none;
+    z-index: 2;
+    cursor: pointer;
+
+    @media screen and (min-width: @md) {
+      display: none;
+    }
+
+    &:hover,
+    &:active {
+      background: $accent-darkest-color;
+    }
+  }
+
+  &--opened .main-nav__toggle {
+    top: 0;
+    right: auto;
+    left: 0;
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      top: 24px;
+      left: 18px;
+      width: 36px;
+      height: 2px;
+      background: $white-color;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      box-shadow: none;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+
+    &:active::before,
+    &:active::after {
+      background: rgba(255,255,255,.3);
+    }
+  }
+
 
   &--closed .main-nav__toggle:active::before {
     background: rgba(255, 255, 255, .3);
@@ -49,13 +102,26 @@
     }
   }
 
+  &__wrapper {
+    @media screen and (min-width: @md) {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 auto;
+      width: 640px;
+    }
+
+    @media screen and (min-width: @xl) {
+      width: 960px;
+    }
+  }
+
   &--opened .main-nav__wrapper {
     position: absolute;
     top: 0;
     right: 0;
     left: 70px;
     min-height: 80vh;
-    background: @accent-dark-color;
+    background: $accent-dark-color;
     z-index: 10;
 
     &::before {
@@ -70,61 +136,10 @@
     }
   }
 
-  &--opened .main-nav__toggle {
-    top: 0;
-    right: auto;
-    left: 0;
 
-    &::before,
-    &::after {
-      content: '';
-      position: absolute;
-      top: 24px;
-      left: 18px;
-      width: 36px;
-      height: 2px;
-      background: @white-color;
-    }
-
-    &::before {
-      transform: rotate(45deg);
-      box-shadow: none;
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-    }
-
-    &:active::before,
-    &:active::after {
-      background: rgba(255,255,255,.3);
-    }
-  }
-
-  &__toggle {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    width: 70px;
-    height: 50px;
-    background: @accent-dark-color;
-    border: none;
-    z-index: 2;
-    cursor: pointer;
-
-    @media screen and (min-width: @md) {
-      display: none;
-    }
-
-    &:hover,
-    &:active {
-      background: @accent-darkest-color;
-    }
-  }
 
   &__list {
-    .reset-list;
+    @include reset-list;
   }
 
   &--no-js{
@@ -151,21 +166,9 @@
   @media screen and (min-width: @md) {
     margin: 0;
     width: auto;
-    background: @black-color;
+    background: $black-color;
   }
 
-  &__wrapper {
-    @media screen and (min-width: @md) {
-      display: flex;
-      justify-content: space-between;
-      margin: 0 auto;
-      width: 640px;
-    }
-
-    @media screen and (min-width: @xl) {
-      width: 960px;
-    }
-  }
 }
 //main-nav
 

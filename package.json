@@ -28,7 +28,9 @@
     "pug-lint": "^2.5.0",
     "sass-lint": "^1.12.1",
     "sass-lint-auto-fix": "^0.15.0",
-    "stylelint": "^9.10.1"
+    "stylelint": "^9.10.1",
+    "stylelint-config-recommended": "^2.1.0",
+    "stylelint-order": "^2.0.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

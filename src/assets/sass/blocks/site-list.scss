@@ -39,7 +39,7 @@
           bottom: -3px;
           left: 0;
           height: 3px;
-          background: @accent-color;
+          background: $accent-color;
         }
       }
     }
@@ -49,14 +49,14 @@
     display: block;
     padding: 12px 21px;
     padding-bottom: 13px;
-    font-size: @regular-size;
+    font-size: $regular-size;
     line-height: 24px;
     text-transform: uppercase;
     text-decoration: none;
-    color: @white-color;
-    background: @accent-color;
-    border-top: 1px solid @accent-color-lightnest;
-    border-bottom: 1px solid @accent-color-darknest;
+    color: $white-color;
+    background: $accent-color;
+    border-top: 1px solid $accent-color-lightnest;
+    border-bottom: 1px solid $accent-color-darknest;
 
     @media screen and (min-width: @md) {
       padding: 0;
@@ -71,8 +71,8 @@
       border-top-color: #755a46;
 
       @media screen and (min-width: @md) {
-        color: @accent-color;
-        background: @black-color;
+        color: $accent-color;
+        background: $black-color;
       }
     }
 
@@ -82,8 +82,8 @@
       border-top-color: #6a4d38;
 
       @media screen and (min-width: @md) {
-        color: @white-color;
-        background: @black-color;
+        color: $white-color;
+        background: $black-color;
         opacity: 0.3;
       }
     }

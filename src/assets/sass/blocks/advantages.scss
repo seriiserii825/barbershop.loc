@@ -1,11 +1,11 @@
-@import "../partials/_variables.less";
+@import "../partials/_variables.scss";
 
 .advantages {
   position: relative;
   margin: 0 auto;
   width: 320px;
-  color: @white-color;
-  background: @black-lighter-color;
+  color: $white-color;
+  background: $black-lighter-color;
 
   &::after {
     content: '';
@@ -16,7 +16,7 @@
     display: block;
     height: 0;
     border: 34px solid transparent;
-    border-top-color: @black-lighter-color;
+    border-top-color: $black-lighter-color;
     border-left-width: 160px;
     border-right-width: 160px;
   }
