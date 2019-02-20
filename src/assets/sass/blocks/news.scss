@@ -6,14 +6,35 @@
   padding-bottom: 28px;
   width: 320px;
   background: #fff;
+
+  @media screen and (min-width: $md) {
+    position: relative;
+    margin-top: 0;
+  }
+
+  &__wrapper {
+    @media screen and (max-width: $md) {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(4, auto);
+      grid-template-areas: "news-title"
+                            "news-list"
+                            "news-button";
+    }
+  }
 }
 
 .news__title {
+  grid-area: news-title;
   margin-bottom: 15px;
   font-size: 30px;
   line-height: 1;
   text-transform: uppercase;
   text-align: center;
+}
+
+.news__list {
+  grid-area: news-list;
 }
 
 .news__item {
@@ -51,5 +72,9 @@
   span {
     margin: 0;
     line-height: 0.8;
+  }
+
+  .news__button {
+    grid-area: news-button;
   }
 }
