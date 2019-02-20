@@ -6,10 +6,17 @@
   padding-bottom: 28px;
   width: 320px;
   background: #fff;
+  border-bottom: 1px solid #e5ddd5;
 
   @media screen and (min-width: $md) {
     position: relative;
     margin-top: 0;
+    width: 640px;
+  }
+
+  @media screen and (min-width: $xl) {
+    padding-top: 80px;
+    width: 960px;
   }
 
   &__wrapper {
@@ -21,6 +28,14 @@
                             "news-list"
                             "news-button";
     }
+
+    @media screen and (min-width: $md) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, auto);
+      grid-template-areas: "news-title news-button"
+                            "news-list news-list"
+    }
   }
 }
 
@@ -31,10 +46,19 @@
   line-height: 1;
   text-transform: uppercase;
   text-align: center;
+
+  @media screen and (min-width: $md) {
+    margin-bottom: 54px;
+  }
 }
 
 .news__list {
   grid-area: news-list;
+
+  @media screen and (min-width: $md) {
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 .news__item {
@@ -42,6 +66,16 @@
   justify-content: space-between;
   align-items: flex-start;
   padding: 20px;
+
+  &:last-child {
+    @media screen and (min-width: $md) {
+      display: none;
+    }
+
+    @media screen and (min-width: $xl) {
+      display: flex;
+    }
+  }
 }
 
 .news__text {
@@ -60,6 +94,10 @@
   height: 50px;
   color: $white-color;
   background: #000;
+
+  @media screen and (min-width: $md) {
+    margin-right: 20px;
+  }
 
   &::after {
     content: '';

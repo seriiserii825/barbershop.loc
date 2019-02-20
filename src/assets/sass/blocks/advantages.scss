@@ -1,10 +1,29 @@
 @import "../partials/_variables.scss";
 .advantages {
+  position: relative;
   margin: 0 auto;
   width: 320px;
   color: $white-color;
   background: $black-lighter-color;
-}
+
+  &::after {
+      content: '';
+      position: absolute;
+      bottom: -68px;
+      left: 0;
+      right: 0;
+      display: block;
+      height: 0;
+      border: 34px solid transparent;
+      border-top-color: $black-lighter-color;
+      border-left-width: 160px;
+      border-right-width: 160px;
+
+      @media screen and (min-width: $md) {
+        display: none;
+      }
+    }
+  }
 
 .advantages__relative {
   position: relative;
@@ -19,6 +38,10 @@
       height: 40px;
       background: linear-gradient(to right top, transparent 49.5%, #353535 50%) left / 50.025% 100% no-repeat, linear-gradient(to left top, transparent 49.5%, #353535 50%) right / 50.025% 100% no-repeat;
       z-index: 1000;
+    }
+
+    @media screen and (min-width: $xl) {
+      bottom: -38px;
     }
   }
 }
