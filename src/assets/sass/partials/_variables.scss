@@ -16,7 +16,7 @@ $white-darken-color: #f7f4f1;
 $gray-color: #404040;
 $gray-light-color: #4e4e4e;
 
-$text-color: @black-color;
+$text-color: $black-color;
 $body-bg: #353535;
 
 $regular-size: 18px;
