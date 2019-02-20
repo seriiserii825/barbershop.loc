@@ -36,4 +36,8 @@ $(function () {
       mainNav.addClass('main-nav--closed');
     }
   });
+
+  $('.slider-list').slick({
+
+  });
 });
