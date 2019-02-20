@@ -2,6 +2,7 @@
 
 let gulp = require('gulp'),
 sass = require('gulp-sass'),
+wait = require('gulp-wait'),
 pug = require('gulp-pug'),
 autoprefixer = require("gulp-autoprefixer"),
 sourcemaps = require('gulp-sourcemaps'),
@@ -33,7 +34,8 @@ gulp.task('pug', function(){
 
 gulp.task("css", function(){
 	return gulp.src('src/assets/sass/**/*.scss')
-	.pipe(gp.sourcemaps.init())
+  .pipe(gp.sourcemaps.init())
+  .pipe(gp.wait(500))
 	.pipe(sass({outputStyle: 'expanded'}).on('error', notify.onError(function (error) {
 		return 'An error occurred while compiling sass.\nLook in the console for details.\n' + error;
 	})))

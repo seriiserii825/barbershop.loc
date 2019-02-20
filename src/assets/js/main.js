@@ -38,6 +38,20 @@ $(function () {
   });
 
   $('.slider-list').slick({
-
+    dots: true,
+    arrows: false,
+    responsive: [{
+      breakpoint: 1980,
+      settings: "unslick" // destroys slick,
+    },
+    {
+      breakpoint: 767,
+      settings: {
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        dots: true
+      },
+    }
+  ]
   });
 });

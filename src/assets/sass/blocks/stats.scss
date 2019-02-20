@@ -3,6 +3,7 @@
 .stats {
   margin: 0 auto;
   width: 320px;
+
   &__header {
     position: relative;
     padding: 30px 40px 25px 40px;
@@ -94,6 +95,7 @@
 @media screen and (min-width: $md) {
   .stats {
     margin-top: -185px;
+    margin-bottom: 26px;
     width: 640px;
     min-height: 0;
   }
@@ -191,6 +193,7 @@
   .stats {
     display: flex;
     margin-top: -160px;
+    margin-bottom: 79px;
     width: 960px;
   }
 

@@ -22,5 +22,141 @@
   }
 }
 
+.advantages__item {
+  padding-top: 28px;
+}
 
+.advantages__icon {
+  display: table;
+  margin: 0 auto 34px;
+  width: 95px;
+  height: 94px;
+
+  svg {
+    display: inline-block;
+    vertical-align: middle;
+  }
+}
+
+.advantages__title {
+  font-size: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  color:#f7f4f1;
+}
+
+.advantages__description {
+  margin: 0 auto 30px;
+  width: 228px;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 27px;
+  text-align: center;
+  color: #f7f7f7;
+}
+
+.slick-dots {
+  margin-bottom: 20px;
+  z-index: 1000;
+
+  li {
+    width: 5px;
+    height: 5px;
+    background: transparent;
+    border: 1px solid #fff;
+    transform: rotate(45deg);
+
+    &.slick-active {
+      background: #fff;
+    }
+
+    button {
+      display: none;
+    }
+  }
+}
+
+@media screen and (min-width: $md) {
+  .advantages {
+    width: 640px;
+    background: #353535;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .advantages__item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #494949;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .advantages__icon {
+    margin: 0;
+    margin-right: 34px;
+  }
+
+  .advantages__title {
+    margin-bottom: 14px;
+    line-height: 1;
+    text-align: left;
+  }
+
+  .advantages__description {
+    width: auto;
+    text-align: left;
+  }
+
+  .advantages__bottom {
+    height: 100px;
+    background: #fff;
+  }
+
+  .advantages__triangle {
+    height: 100px;
+    background: linear-gradient(to right top, transparent 49.5%, #353535 50%) left / 50.025% 100% no-repeat, linear-gradient(to left top, transparent 49.5%, #353535 50%) right / 50.025% 100% no-repeat;
+  }
+
+}
+
+@media screen and (min-width: $xl) {
+  .advantages {
+    width: 960px;
+  }
+
+  .advantages__list {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .advantages__item {
+    display: block;
+    flex-grow: 1;
+    padding: 0 45px;
+    border: none;
+    border-right: 1px solid #494949;
+
+    &:last-child {
+      border: none;
+    }
+  }
+
+  .advantages__icon {
+    display: table;
+    margin: 0 auto 34px;
+  }
+
+  .advantages__title {
+    text-align: center;
+  }
+
+  .advantages__description {
+    text-align: center;
+  }
+}
 

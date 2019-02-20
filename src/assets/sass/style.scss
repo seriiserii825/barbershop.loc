@@ -2,17 +2,21 @@
 @import 'partials/_fonts.scss';
 @import 'partials/_variables.scss';
 @import 'partials/_mixins.scss';
+@import '../libs/slick/slick.scss';
 
 
 body {
-  background:$body-bg;
+  background: $body-bg;
   color: $text-color;
+  @include ptsans;
   font-size: 18px;
   margin: 0;
   padding: 0;
 }
 
-
+ul {
+  @include reset-list;
+}
 
 h1,
 h2,
@@ -55,3 +59,4 @@ a {
 @import "blocks/user-list.scss";
 @import "blocks/stats.scss";
 @import "blocks/advantages.scss";
+@import "blocks/news.scss";
