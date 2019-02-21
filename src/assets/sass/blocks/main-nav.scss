@@ -8,6 +8,12 @@
   min-height: 51px;
   background: $accent-color;
 
+  .container {
+    @media screen and (max-width: $md) {
+      padding: 0;
+    }
+  }
+
   &--closed .main-nav__toggle::before {
     content: '';
     position: absolute;

@@ -29,7 +29,7 @@
     @media screen and (min-width: $md) {
       content: '';
       position: absolute;
-      bottom: -27px;
+      bottom: -40px;
       left: 0;
       right: 0;
       display: block;
@@ -99,6 +99,9 @@
     position: relative;
     width: 640px;
     background: #353535;
+  }
+  .advantages__list {
+    padding: 0 30px;
   }
   .advantages__item {
     display: flex;

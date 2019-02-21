@@ -52,12 +52,14 @@ a {
 .container {
   margin: 0 auto;
   padding: 0 20px;
-  width: 280px;
+  width: 320px;
+  outline: 1px solid red;
   @media screen and (min-width: $md) {
     padding: 0 65px;
     width: 640px;
   }
   @media screen and (min-width: $xl) {
+    margin: 0 auto;
     padding: 0 120px;
     width: 960px;
   }
