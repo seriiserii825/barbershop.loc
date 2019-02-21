@@ -1,3 +1,58 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
 .page-form {
   background: #fff;
+
+  input,
+  textarea {
+    margin-bottom: 6px;
+    width: 100%;
+    line-height: 50px;
+    @include ptsans;
+    font-size: 18px;
+    text-indent: 19px;
+    border: 1px solid #e5ddd5;
+  }
+
+  input {
+    height: 50px;
+  }
+
+  textarea {
+    height: 112px;
+    color: #000;
+    font-size: 18px;
+    font-weight: bold;
+  }
+
+  input::-webkit-input-placeholder {
+    color: #000;
+    font-weight: bold;
+  }
+
+  /* webkit */
+
+  input::-moz-placeholder {
+    color: #000;
+    font-weight: bold;
+  }
+
+  /* webkit */
+
+  input:-moz-placeholder {
+    color: #000;
+    font-weight: bold;
+  }
+
+  /* webkit */
+
+  input:-ms-input-placeholder {
+    color: #000;
+    font-weight: bold;
+  }
+}
+
+.page-form__group {
+  margin-bottom: 26px;
 }
