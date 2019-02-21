@@ -1,0 +1,66 @@
+@import "../partials/variables";
+@import "../partials/mixins";
+
+.choose-section {
+  padding-top: 42px;
+  padding-bottom: 27px;
+  background: #f8f5f2;
+  @media screen and (min-width: $md) {
+    padding-bottom: 40px;
+  }
+}
+
+.choose-section__wrap {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  @media screen and (min-width: $md) {
+    grid-template-columns: repeat(5, 1fr);
+  }
+}
+
+.choose-section__item {
+  margin-bottom: 21px;
+  text-align: center;
+}
+
+.checkbox {
+  margin-bottom: 20px;
+  @media screen and (min-width: $md) {
+    margin-bottom: 35px;
+  }
+  &__input {
+    display: none;
+  }
+  input[type=checkbox]:checked + label {
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 18px;
+      height: 18px;
+      border-radius: 50%;
+      border: 1px solid #e5ddd5;
+      background-color: #ffffff;
+    }
+  }
+
+  &__label {
+    position: relative;
+    display: inline-block;
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    border: 1px solid #e5ddd5;
+    background-color: #ffffff;
+  }
+}
+
+.choose-section__item-title {
+  margin-bottom: 15px;
+  @media screen and (min-width: $md) {
+    margin-bottom: 32px;
+  }
+}

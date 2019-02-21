@@ -53,11 +53,15 @@
       <!--section.page-form-->
       <section class="choose-section">
         <div class="container">
-          <header class="form-section__header">
-            <h3 class="form-section__title">Выберите модель бороды:</h3>
-          </header>
+          <div class="settings">
+            <h3 class="settings__title">Выберите модель бороды:</h3>
+          </div>
           <div class="choose-section__wrap">
             <div class="choose-section__item">
+              <div class="checkbox">
+                <input class="checkbox__input" id="check1" type="checkbox" name="checkbox" value="check1">
+                <label class="checkbox__label" for="check1"></label>
+              </div>
               <div class="choose-section__item-title">адмирал</div>
               <div class="choose-section__img"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="52" height="49" viewBox="0 0 52 49">
 <image id="beard-1.svg" width="52" height="49" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADQAAAAxCAYAAACVtYpYAAADFklEQVRogd1a0XHbMAx98WUAjyBPUHWCqhM0maDWR79jT+C2C9iZIM4EdSewOkGcCaIN6g3agw7Q0QxJUSStWHl3vvgcE3iPJECA8tXPbze/ACwB1Bg3MgDrCYAbfo0djY4Ji/j0DgQ1GkRQ8bZckqDRIIKmAPIRi8lZQysII1+llrsqaMxx1HJ/1ys01jhq4weaIIz0PDrZWROtQvgyPJ9oqJzraxaU8Qc5v09RBuWOFd8BOCTwkWkr1AjSQSQ2EU7mAO464nHFgu4BbCN8vZowPYbAZEJAQl4APHgml5y/+8JjQ/CKq0mQvowuUHZZKEIyz3G6PxG2UDNWBwqTPxJ0NAxceRgUIetAIToytiXCumDieCRBz4Z/FA6j5PiJnfvOZh9M2Tb5sE3UwrKLnk1bTrAyxELOjoY4gG2+ctcOcgmimdorBqe818+xKi4Oqs+cOVk52GJINbhXtmDoytC5UwWOzZUt5hRDWq49DjgR5RJuQs0iHhUxROornx99VvrOM1EdTAerDS4CO04uQvxgmYCKX6VWDJPQD47Kwlt8H0E2lIGn/VGZAPk755gJxiRib4OFxJQuqe1Vrizng/vI8SZE2RRBfQNexqSomHXY4s+HTysohFifMUXPFj+YT+yW68J3AH857e/5vU+dFgwR9CfAQNGRTh/47FC/I3WaK5NNAy9sGg0iKLRDXVsIPXX0OHP+jmlCTDZ90GiIFTTXaq1Cq/9cyJWyCkrdFtrsNRrocYp88C/Q0KXgClpS2I1YTMtdFfT7bbgkQctdFbQd6VO8Wi2X9HPox/B8onHCWRe0jSxWh0alF7OmSqEMrKWGxpG5nsAkiPbk7QgE3Zpi3lbLVSb1F4TSFhqu4nR7oaKcHXJXtU0DP19ITB2Zi7Oj9WkfKjZ0jmbOFwfm0JmBffshMvgx8jFLKDbs22tC+zZ4yz7GIyGTuOxjJqRjFUflmUqlmm0HTVxMC07BOUv4S66abc1irrJS3ClsmIT1bOiAnHmzFDGa4uZUIJeE9EyHukb6dYfp3kFuTOkOgPqYdNsWwH/ltKY77YdnHQAAAABJRU5ErkJggg=="/>
@@ -65,6 +69,10 @@
               </div>
             </div>
             <div class="choose-section__item">
+              <div class="checkbox">
+                <input class="checkbox__input" id="check2" type="checkbox" name="checkbox" value="check2">
+                <label class="checkbox__label" for="check2"></label>
+              </div>
               <div class="choose-section__item-title">лесоруб</div>
               <div class="choose-section__img"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="58" height="68" viewBox="0 0 58 68">
 <image id="beard-2.svg" width="58" height="68" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADoAAABECAYAAADQkyaZAAADOklEQVRoge1b7W3bMBC9Cv1fjuBMEGWCOBNUmSDJj/6uO4GLLpBuEG0QZ4KqE9gbOJ2g3qAFhTuDPvEoSiYdkc4DBEMyRb53fKT4IX348aUCC9YAcAsAr7Y/J4wZADwDwBWnWFg4KwAoAWCemEiNOXJX/A+b0BJ/L+PzCg7iXPKMXUI7iROAyF2yLiRsXfC1bpboE5pSrTq5vtco4mxq9FNYLlHh5NonNKVHjJOrTag57EtVaGfo2idU4fhx6pixZ6eX0B07P6ZD0gQecZLwD4+/eND5GtMcE1DOkWuwCt2w888jC9aziC0ALJitFIt+iWm2eM+YwHKOXIPYGZkRqWxDKgt0mnusoV9431BUeO8a8/It1yyrU5suoTwiC0dB2nJPWCNPgTqwkuXpsjXn1qlNcAjljfmrEN3vSMY3+kNBLtliWRwKubm4O4X+sWTII6cjvYwgTsISyzSxsASYc2/ha13AgqijqDDSp8a90R7nQqAHWdfaoLFXVCeuSY4lcngW/rdy/ygkboTrCttLjPboi7KHg5X7mGnaW4oczUGq0ZCQ3MERdUoYU+hPAPg28J7Hnmf2aMQUOsdRzm/P9Ncxm4UkNMSMhUZIp16lmPnOXiCRqZkEK3dJaIqL1wQrd0loitsRBCv3s65RlYFQry2JFPdcODoabELHLJ1MDR0NZ1ujZeLPUMKM9zNc6N3JKcXDgRYudMzK3VRxoMUUmottCQf2NYXmZFvCXpMpNCfbEvaaSGhutiXs7UtCc7QtodVGQnO0LaHVVmRsW0Jr3yLz2iRUBS5K5Y7rIvG5py9a605h5T021PubY7mhcGwR5oRdMWATKGU0WujLGQh90UJraTs8E2htNXVGDxkLbbWR0E2mYh/IrebjpcaPenLohXeopaYL/Dm6wq+AUu6JG9SwMi9Kr7HeJPjJluZ6i9y9N4IBI3KBPp+y4FfkqLmupEQ+Q8AaM7mZmKUb5HRhtkUJQ8a6lPGVT8YRUSOHQYEfM6jf+FglAsymNHiAc8zsxWz8MS3dhOgcQ0zTiEhowUHzDTkfNYkdY+lVjMDFeHNMk9MHveuud59dS6rajrrN6VmUFhl+ZAYA/wGbO5F8nHX9OAAAAABJRU5ErkJggg=="/>
@@ -72,6 +80,10 @@
               </div>
             </div>
             <div class="choose-section__item">
+              <div class="checkbox">
+                <input class="checkbox__input" id="check3" type="checkbox" name="checkbox" value="check3">
+                <label class="checkbox__label" for="check3"></label>
+              </div>
               <div class="choose-section__item-title">полярник</div>
               <div class="choose-section__img"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="63" height="78" viewBox="0 0 63 78">
 <image id="beard-3.svg" width="63" height="78" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAD8AAABOCAYAAACXIc67AAAD6klEQVR4nO2b0XEbIRCGNzd5z3WQcwfXgS4VxKrA1kPekwokpwHZFVgdWK7AcgfqwJcOzh1k0CwZjGBZOE4ClH9GM7J8B/vBAsse9+n3j2tg6hEAXgFgw73hDLoFgBkALDhVV0z7aqXglDVDO+uY8NI92sThpX0sd+bCyx7PBZ7loVz4Tvne+Nt0Eql2dZwKOfCNVnAO8LrNRnHgdVdnteoZpNvlHKIh8F8ShdftigKvTx6pTnq6Xc5JjwOvr5k5jHngrPUhbp8LfBS3Nym1SS/Ins+BhYpW3YVUSJQ7pjxbL3dUuS54m8Rkcs+8tsFwc4bGUGNxQGPFBmoLAL2HPd6a0u3FNS8A8AYAa2wA1yRU43VrvO/Foy5vhcLXxOZB/O/Jw3BKsgGfiIbjNKpRLnjK+BvDby32GDtJwNQ1lmsa2yY7OPYH9zygQeryUmMvBfUCQ6bymzEN7YJ3TSSPynfKNWNJDilT/d72u2Z7V0Aj3OonAOxPuPZ3+GkZdZL2U/A1M5pb4xJ1SnG9rMHrjPZRbu+zgZna3cfUZ+Wg4FPdt/vKykG5/VSZ2j1+/ii/fcUemmK7bOWg4GP1/ICh6jOGrtT8UGO938cEL5qsHDa3jxWkiNj8Ch8ibBkTo2yoBd7Hje1dMvLYej6Wyze4FO603xpMO7U4BN4RVIXtIuYOZtioH2R7XPWWcNIiRNIDP8jk9m1h4IA8R5OpCZ7aKOSsIy4T/G2h8EdcOjz7CWeGqvUGUOFrjNNL1lrtXBV+XXCvSwm+pfxDwncFj3VdIu44RH0Sfsm+tQwtJTwnKVCaDsmQquB13aWb6gJ7XaqrMjhnM5XaManr7PUf/lJVYTLhErUX8A8XCv9Q4UHiMQcDcpTg3cgxvzjDU5dzSXAeTmVL+J57TLsACc4etNl+m/hZ+hjaqFlcfan7FTFXnpp65PsnHV6Mh7tC4e/0ec0U5GwK7P3eNKRtEd7R043MZeSxwb8XBm/kuZTY3vtkRvGywZcW7ho3bzb40kJdL7cvbZvr1fPWGzKUlYOCL2XcWzko+NdpbDm5rBwUPOcAUeoaqGjVtc7nnuIi7XfB576/J+13wfce79KkpnvX7pQT3h7tgzMQKy/BgR8yzO+xErLcjU1O+b0NNx/hs6tbZBD17X281HdL+y3hBtijfWz5wg9YQWppri3a5TUxhyQzRAXzhLK8d2iP94o0JpOzwtY+V6a3x/pXoQWMTWPt8Cj3KWMBuYZfjd15xsrhrZRGmMoTegU6uLdVxUxgDkojzHG9HesNA5YzV6CjeVjo+/MuidlXvisjDzmKVz3kC0Q2yReQxB5cfJ9uWQWAvyY5sAotDeblAAAAAElFTkSuQmCC"/>
@@ -79,6 +91,10 @@
               </div>
             </div>
             <div class="choose-section__item">
+              <div class="checkbox">
+                <input class="checkbox__input" id="check4" type="checkbox" name="checkbox" value="check4">
+                <label class="checkbox__label" for="check4"></label>
+              </div>
               <div class="choose-section__item-title">боярин</div>
               <div class="choose-section__img"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="57" height="97" viewBox="0 0 57 97">
 <image id="beard-4.svg" width="57" height="97" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAADkAAABhCAYAAABsxQkfAAADjUlEQVR4nO2c323bMBDGz0Lfqw2qThBlgjgbdIPGD31uMkH/LGBngmQEd4K6E0SZIN4g2sAFhaNA0eSJpCmJpPQDhCSwQ36fjkdSZ8mr39++AEEOAC8A8Jl608S8AcA1ANQ6GVmPPnYGCgAoAzVYoj4yUn0mb/Dn2p8ur3BdN1SjJpFkfArLWwvX5RzJAnMSAh+ujBz1KqFMlprfQ8JIo6nJXIhqKMianEzKeRhaNGU92nmjLyepRqdG1uOUkzKhzbDGeiiT8toYeiS1a7lNJEPbEBjrsTEJDtFkQp4A4B0ATorjHV+3PYFW79eZ1JkhdxYCdwDwF487YvnJFe81QWdSqVtnUifqKyGAzW7bC6PDo76lZktCh1K37XAtNOK3eMlz72HTkGM7b9iuzLrnBJxha5LxQ/r7BUUNwT22T/XvbJKKxlrIzZ8jLC0l9gPYL5UGSt0fiIYpnrBBKkd9wvo5aoavrHtvarKPHI2ORXFJfy45GR06kx89GWFDbIOFppXiuMbXj576U+p2zUkTjn1VNACo8NjjLGq1NJjqHnK47nsMitSqCcMXLkuIKaXQjrh9Oym2e2SNxgKlbl1x+eT9dI7HSu5ptrNrqJU5U870q0yGVpWz5Uz/EslIMYrkVeQmz/QvORkpS05CwB+22tLxIZv0sX8MgY6PWZokP3uPiI6PZbhGjNZkKjMrp/Ujmox9EyDT+hFNhnqvjiutn9lFMvmcTGVWlWl8cZOpDVVO42tWJmOvBuhofM0qkslPPKktHTLrLOEocorZmEx1ZuVcZQlU5/rIs4SXD045m0gmz2IyFRaTqbCYTIXFZCpkeJdiylSZxZ2MsVLPxuRrAEKG5DXzeGt0qBxnY/IQgJAhOfB1MtVlpPHFTaYazcYXN/lvWi2D0fiaVSQHfS5jItrnUsQN+p/ETLZ+RJPPCW3xavTTIF9qPZ+/P0o6PmSTj4mY7PiQTbIt3m5cPd7ZyVtVVWXgV8S5WaP+DiqTNT64GSMbVYB0NZ59hOumVjNVyNpEtHGvqNFHmWRhv40gP3t19pUkeQOhXlgfTQJhUnet8AHs0IausS7T4nKNDYayhu4Mnnxvsa2gP2DjU12aHbD/B5t/cvmYoMI8uB3R7EHo0zptXL/7g3d8wJudvuPtaz7vJKmw/cdLJ75LTHKYAD58+NeksoM9ZcPuLDExzgyx/GLlCv4tEn5mdAD4D6TgmofuU67PAAAAAElFTkSuQmCC"/>
@@ -86,6 +102,10 @@
               </div>
             </div>
             <div class="choose-section__item">
+              <div class="checkbox">
+                <input class="checkbox__input" id="check5" type="checkbox" name="checkbox" value="check5">
+                <label class="checkbox__label" for="check5"></label>
+              </div>
               <div class="choose-section__item-title">мудрец</div>
               <div class="choose-section__img"><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45" height="104" viewBox="0 0 45 104">
 <image id="beard-5.svg" width="45" height="104" xlink:href="data:img/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAABoCAYAAABlj3lFAAADSklEQVR4nO2c0XGcMBCGNzcpgA5yHYRUYDrwdZD4wc+ZVOBxGrCvgsQV3LkCOxUEV2DSAe4gI2ZhBAixWkDsevhnbu4OC+nz8mslIeY+/Lw+AAD8AoArkK87APixA4AEAPYKgI1Sw7vDD1qgDWe6s75oUMVpoDOETYVD13zZzjooPdoNnw2tJdIV9AV+/rweD0k138Vmj4XVsoetbAUYilpcu44tpEbb5tp3oaV2Rptr37WHhkj3PJ3iBEqSkjFoENgZezwu6Ms4LGT1eD46zjwwFwSZFZVP2MELAPiHx57xFaoDBTrBgmdC5abcV1fFDt3gIVPvQ0D9vT7msgcQLGIi+hcATkTgLsgJzx/rP06OIehvA+kvwQafZkiPKdZzGshYKXL0NAQNuNi1KzMVvDIiO6YD1msDJti+Uy5P10rxEuYR1pE15A123r2vPR80jJ28gEjt+ewhVmORDlWOufjFusxmspPNOa+ZCl0g5CO+l56yCaa4S3xn244LbQCPjgHCl3efsXx9jska3zlzHQ50Hc07zLFcFfgKFgc6mWkmyM5MKrPHBh1LG3QsbdCxpBaaNSqtqEIttDpt0LGkFjoXwBGi3EC/6eGt9LZ5OpbUetq37JeoUq09VEZapafVqYbWMj2tOFVDa+mMFWcN/bIuC1kVp+pIa0l7FeeWPSKoBQ3MzfaYavhsaOm+bvhsaOnLroZPvT2kd8aGrwstdZAph6BBcGdscXWh/8RlIavF9S4irRKavV+9oHpMrjWitHzd43FBS1sQ9Hhc0JSH/GKqx+OCluRrJ8vQfQ8pvnZyDEE/LstClpPjXUW6FNAhz0MTON+9vLXnIYPt+6AlRNopH3Sx4lwk96XdsVu9D/PzkORtdwx6LYt42x2DLlYAP4+NyJSdgNgDzWh7FOjBfLmASOMDBTrmQEMKEHWj6DidZ752qNB5hJxNbiNkS27paJPrD4H+vWCHLLF+kkI3P5eKdlC9odD3C0S7xHrJCoUOuoxEBduOszd+nDHaJcdyHOhiRm8fOSt/7lMIc3g72Mu1uNCmwVvmubVuuf/4lOc97ieMkjk3yjDDI25XjGiZ8pN+iWgqtInYF/MzQ4R7Jebvppwpz5/HAMB/lPi2UjVca1MAAAAASUVORK5CYII="/>
