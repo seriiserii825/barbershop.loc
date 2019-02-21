@@ -37,38 +37,42 @@ $(function () {
     }
   });
 
-  $('.slider-list').slick({
-    dots: true,
-    arrows: false,
-    responsive: [{
-      breakpoint: 1980,
-      settings: "unslick" // destroys slick,
-    },
-    {
-      breakpoint: 767,
-      settings: {
+  if($('.slider-list').length > 0){
+    $('.slider-list').slick({
+      dots: true,
+      arrows: false,
+      responsive: [{
+        breakpoint: 1980,
+        settings: "unslick" // destroys slick,
+      },
+      {
+        breakpoint: 767,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+          dots: true
+        },
+      }
+    ]
+    });
+  }
+
+  if($('.slider__list').length > 0){
+    $('.slider__list').slick({
+      dots: true,
+      arrows: true,
+      responsive: [{
         slidesToShow: 1,
         slidesToScroll: 1,
-        dots: true
+        dots: true,
       },
-    }
-  ]
-  });
-
-  $('.slider__list').slick({
-    dots: true,
-    arrows: true,
-    responsive: [{
-      slidesToShow: 1,
-      slidesToScroll: 1,
-      dots: true,
-    },
-    {
-      breakpoint: 767,
-      settings: {
-        arrows: false
-      },
-    }
-  ]
-  });
+      {
+        breakpoint: 767,
+        settings: {
+          arrows: false
+        },
+      }
+    ]
+    });
+  }
 });

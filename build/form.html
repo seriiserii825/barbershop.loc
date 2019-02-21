@@ -8,8 +8,8 @@
   </head>
   <body>
     <header class="page-header"><a class="page-header__logo"><img src="assets/i/logo-top.png" alt="Барбершоп «Бородинский»"><img src="assets/i/logotype-mobile.svg" alt="Барбершоп «Бородинский»"><img src="assets/i/logo-bottom.png" alt="Барбершоп «Бородинский»"></a>
-      <nav class="main-nav">
-        <button class="main-nav__toggle" type="button">Открыть меню</button>
+      <nav class="main-nav main-nav--opened main-nav--no-js">
+        <button class="main-nav__toggle" type="button"><span class="visually-hidden">Открыть меню</span></button>
         <div class="main-nav__wrapper">
           <ul class="main-nav__list site-list">
             <li class="site-list__item site-list__item--active"><a href="index.html">Главная</a></li>
@@ -28,8 +28,8 @@
     </header>
     <!--page-header-->
     <main class="page-main">
-      <div class="container">
-        <section class="page-form">
+      <section class="page-form">
+        <div class="container">
           <header class="page-form__header">
             <h3 class="page-form__title">Запись на стрижку</h3><a class="page-form__button button" href="index.html">На главную</a>
           </header>
@@ -45,9 +45,11 @@
             </div>
             <textarea name="message" cols="30" rows="10">Доп. информация для мастера</textarea>
           </form>
-        </section>
-        <!--section.page-form-->
-        <section class="choose-section">
+        </div>
+      </section>
+      <!--section.page-form-->
+      <section class="choose-section">
+        <div class="container">
           <header class="form-section__header">
             <h3 class="form-section__title">Выберите модель бороды:</h3>
           </header>
@@ -88,9 +90,11 @@
               </div>
             </div>
           </div>
-        </section>
-        <!--section.choose-section-->
-        <section class="services-section">
+        </div>
+      </section>
+      <!--section.choose-section-->
+      <section class="services-section">
+        <div class="container">
           <header class="form-section__header">
             <h3 class="form-section__title">Дополнительные услуги:</h3>
           </header>
@@ -121,9 +125,9 @@
             </div>
           </div>
           <button class="page-form__submit button">Отправить заявку</button>
-        </section>
-        <!--section.form-section-->
-      </div>
+        </div>
+      </section>
+      <!--section.form-section-->
     </main>
     <!--page-main-->
     <footer class="page-footer">

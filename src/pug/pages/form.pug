@@ -12,8 +12,9 @@ block content
       img(src="assets/i/logotype-mobile.svg" alt="Барбершоп «Бородинский»")
       img(src="assets/i/logo-bottom.png" alt="Барбершоп «Бородинский»")
 
-    nav.main-nav
-      button.main-nav__toggle(type="button") Открыть меню
+    nav.main-nav.main-nav--opened.main-nav--no-js
+      button.main-nav__toggle(type="button")
+        span.visually-hidden Открыть меню
 
       .main-nav__wrapper
         ul.main-nav__list.site-list
@@ -37,7 +38,6 @@ block content
   //page-header
 
   main.page-main
-    .container
       include ../includes/page-form.pug
       include ../includes/choose-section.pug
       include ../includes/services-section.pug
