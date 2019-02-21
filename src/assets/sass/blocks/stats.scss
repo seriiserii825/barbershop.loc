@@ -1,9 +1,6 @@
 @import "../partials/_variables.scss";
 @import "../partials/_mixins.scss";
 .stats {
-  margin: 0 auto;
-  width: 320px;
-
   &__header {
     position: relative;
     padding: 30px 40px 25px 40px;

@@ -106,12 +106,6 @@
     @media screen and (min-width: $md) {
       display: flex;
       justify-content: space-between;
-      margin: 0 auto;
-      width: 640px;
-    }
-
-    @media screen and (min-width: $xl) {
-      width: 960px;
     }
   }
 

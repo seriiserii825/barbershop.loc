@@ -1,10 +1,8 @@
 @import "../partials/_variables.scss";
 .news {
-  margin: 0 auto;
   margin-top: -28px;
   padding-top: 60px;
   padding-bottom: 28px;
-  width: 320px;
   background: #fff;
   border-bottom: 1px solid #e5ddd5;
 
@@ -13,12 +11,10 @@
     margin-top: 0;
     padding-left: 70px;
     padding-right: 70px;
-    width: 640px;
   }
 
   @media screen and (min-width: $xl) {
     padding-top: 80px;
-    width: 960px;
   }
 
   &__wrapper {

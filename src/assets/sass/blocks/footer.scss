@@ -1,18 +1,12 @@
 @import "../partials/variables.scss";
 
 .page-footer {
-  margin: 0 auto;
-  padding: 80px 0 24px 0;
-  width: 320px;
+  padding: 64px 0 24px;
   color: #fff;
   background: #292929;
+
   @media screen and (min-width: $md) {
-    padding-left: 70px;
-    padding-right: 70px;
-    width: 640px;
-  }
-  @media screen and (min-width: $xl) {
-    width: 960px;
+    padding: 53px 0;
   }
 
   .social__item {

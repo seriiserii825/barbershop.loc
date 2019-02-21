@@ -3,8 +3,6 @@
 @import 'partials/_variables.scss';
 @import 'partials/_mixins.scss';
 @import '../libs/slick/slick.scss';
-
-
 body {
   background: $body-bg;
   color: $text-color;
@@ -31,7 +29,6 @@ h6 {
 
 a {
   text-decoration: none;
-
   &:hover,
   &:focus {
     text-decoration: none;
@@ -47,10 +44,23 @@ a {
   display: none;
   white-space: normal;
   border: 0;
-
   clip-path: inset(100%);
   clip: rect(0 0 0 0);
   overflow: hidden;
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 20px;
+  width: 280px;
+  @media screen and (min-width: $md) {
+    padding: 0 65px;
+    width: 640px;
+  }
+  @media screen and (min-width: $xl) {
+    padding: 0 120px;
+    width: 960px;
+  }
 }
 
 @import "blocks/button.scss";
