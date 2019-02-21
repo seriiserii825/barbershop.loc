@@ -34,17 +34,17 @@
       <section class="page-form">
         <div class="container">
           <header class="page-form__header section-header">
-            <h3 class="page-form__title section-header__title">Запись на стрижку</h3><a class="page-form__button button section-header__button" href="index.html">На главную</a>
+            <h3 class="page-form__title section-header__title">Запись на стрижку</h3><a class="page-form__button button button--small section-header__button" href="index.html">На главную</a>
           </header>
           <form class="page-form__form">
-            <div class="page-form__group">
-              <input type="text" placeholder="Имя">
-              <input type="text" placeholder="Фамилия">
-              <input type="text" placeholder="Отчество">
+            <div class="page-form__group page-form__group--first">
+              <input class="page-form__input page-form__input--name" type="text" placeholder="Имя">
+              <input class="page-form__input page-form__input--last-name" type="text" placeholder="Фамилия">
+              <input class="page-form__input page-form__input--patronymic" type="text" placeholder="Отчество">
             </div>
-            <div class="page-form__group">
-              <input type="phone" placeholder="Контактный телефон">
-              <input type="email" placeholder="Контактный e-mail">
+            <div class="page-form__group page-form__group--last">
+              <input class="page-form__input page-form__input--phone" type="phone" placeholder="Контактный телефон">
+              <input class="page-form__input page-form__input--email" type="email" placeholder="Контактный e-mail">
             </div>
             <textarea name="message" cols="30" rows="10">Доп. информация для мастера</textarea>
           </form>

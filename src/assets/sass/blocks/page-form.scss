@@ -2,7 +2,7 @@
 @import "../partials/mixins";
 
 .page-form {
-  background: #fff;
+  background: #f8f5f2;
 
   input,
   textarea {
@@ -24,6 +24,9 @@
     color: #000;
     font-size: 18px;
     font-weight: bold;
+    @media screen and (min-width: $xl) {
+      height: 211px;
+    }
   }
 
   input::-webkit-input-placeholder {
@@ -55,4 +58,41 @@
 
 .page-form__group {
   margin-bottom: 26px;
+
+  &--last {
+    margin-bottom: 0;
+    @media screen and (min-width: $xl) {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .page-form__input {
+      margin-bottom: 35px;
+      @media screen and (min-width: $xl) {
+        flex-basis: 462px;
+      }
+    }
+  }
+
+  &--first {
+    @media screen and (min-width: $md) {
+      display: flex;
+      @media screen and (min-width: $xl) {
+        justify-content: space-between;
+      }
+    }
+
+    .page-form__input {
+      flex-grow: 1;
+      @media screen and (min-width: $md) {
+        flex-basis: 295px;
+        flex-grow: initial;
+      }
+
+      &:nth-child(2),
+      &:last-child {
+        margin-left: -1px;
+      }
+    }
+  }
 }
