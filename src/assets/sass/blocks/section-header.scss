@@ -1,0 +1,16 @@
+@import "../partials/_variables.scss";
+
+.section-header {
+  padding-top: 33px;
+}
+
+.section-header__title {
+  font-size: 30px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #000;
+}
+.section-header__button {
+  display: none;
+}

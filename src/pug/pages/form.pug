@@ -6,41 +6,13 @@ block title
 
 block content
 
-  header.page-header
-    a.page-header__logo
-      img(src="assets/i/logo-top.png" alt="Барбершоп «Бородинский»")
-      img(src="assets/i/logotype-mobile.svg" alt="Барбершоп «Бородинский»")
-      img(src="assets/i/logo-bottom.png" alt="Барбершоп «Бородинский»")
-
-    nav.main-nav.main-nav--opened.main-nav--no-js
-      button.main-nav__toggle(type="button")
-        span.visually-hidden Открыть меню
-
-      .main-nav__wrapper
-        ul.main-nav__list.site-list
-          block main-nav
-            li.site-list__item.site-list__item--active
-              a(href="index.html") Главная
-            li.site-list__item
-              a(href="our-works.html") Наши работы
-            li.site-list__item
-              a(href="#") Запсаться
-            li.site-list__item
-              a(href="#") Контакты
-            li.site-list__item
-              a(href="#") Html Academy
-
-        ul.main-nav__list.user-list
-          li.user-list__item
-            a.user-list__login(href="login.html") Войти
-      //main-nav__wrapper
-    //main-nav
-  //page-header
+  include ../includes/page-header-form.pug
 
   main.page-main
-      include ../includes/page-form.pug
-      include ../includes/choose-section.pug
-      include ../includes/services-section.pug
+    include ../includes/after-header.pug
+    include ../includes/page-form.pug
+    include ../includes/choose-section.pug
+    include ../includes/services-section.pug
 
 
   //page-main

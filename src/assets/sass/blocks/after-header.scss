@@ -1,0 +1,23 @@
+@import "../partials/variables";
+
+.after-header {
+  position: relative;
+  height: 262px;
+  margin-bottom: -262px;
+  @media screen and (max-width: $md) {
+    display: none;
+  }
+  &::after {
+    content: '';
+    position: absolute;
+    top: -260px;
+    width: 100%;
+    height: 100%;
+    background-image: url("../i/after-header/Slice_1.svg");
+    background-repeat: no-repeat;
+    background-position: center;
+    // background-size: cover;
+  }
+}
+
+

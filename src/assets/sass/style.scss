@@ -52,7 +52,7 @@ a {
 .container {
   margin: 0 auto;
   padding: 0 20px;
-  width: 320px;
+  width: 280px;
   outline: 1px solid red;
   @media screen and (min-width: $md) {
     padding: 0 65px;
@@ -65,6 +65,7 @@ a {
   }
 }
 
+@import "blocks/section-header.scss";
 @import "blocks/button.scss";
 @import "blocks/page-header.scss";
 @import "blocks/main-nav.scss";
@@ -76,4 +77,6 @@ a {
 @import "blocks/reviews.scss";
 @import "blocks/social.scss";
 @import "blocks/copyright.scss";
+@import "blocks/after-header.scss";
+@import "blocks/page-form.scss";
 @import "blocks/footer.scss";
