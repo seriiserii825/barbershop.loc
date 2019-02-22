@@ -1,32 +1,33 @@
 section.services-section
   .container
-    header.form-section__header
-      h3.form-section__title Дополнительные услуги:
+    header.settings
+      h3.settings__title Дополнительные услуги:
 
-    .services-section__wrap
-      .services-section__item
-        input(type="checkbox" checked="checked").services-section__checkbox
-        label.services-section__label Подкрасить бороду
+    form
+      .services-section__wrap
+        .services-section__item
+          input#service1(type="checkbox" checked="checked" name="services").services-section__checkbox
+          label.services-section__label(for="service1") Подкрасить бороду
 
-      .services-section__item
-        input(type="checkbox").services-section__checkbox
-        label.services-section__label Причесать бороду
+        .services-section__item
+          input#service2(type="checkbox" name="services").services-section__checkbox
+          label.services-section__label(for="service2") Причесать бороду
 
-      .services-section__item
-        input(type="checkbox").services-section__checkbox
-        label.services-section__label Убрать седину
+        .services-section__item
+          input#service3(type="checkbox" name="services").services-section__checkbox
+          label.services-section__label(for="service3") Убрать седину
 
-      .services-section__item
-        input(type="checkbox" checked="checked").services-section__checkbox
-        label.services-section__label Накрутить усы
+        .services-section__item
+          input#service4(type="checkbox" checked="checked" name="services").services-section__checkbox
+          label.services-section__label(for="service4") Накрутить усы
 
-      .services-section__item
-        input(type="checkbox").services-section__checkbox
-        label.services-section__label Подровнять усы
+        .services-section__item
+          input#service5(type="checkbox" name="services").services-section__checkbox
+          label.services-section__label(for="service5") Подровнять виски
 
-      .services-section__item
-        input(type="checkbox").services-section__checkbox
-        label.services-section__label Отполировать лысину
+        .services-section__item
+          input#service6(type="checkbox" name="services").services-section__checkbox
+          label.services-section__label(for="service6") Отполировать лысину
 
-    button.page-form__submit.button Отправить заявку
+      button.services-section__submit.button(type="submit") Отправить заявку
 //section.form-section

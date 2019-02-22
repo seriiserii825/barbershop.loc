@@ -59,7 +59,7 @@
           <div class="choose-section__wrap">
             <div class="choose-section__item">
               <div class="checkbox">
-                <input class="checkbox__input" id="check1" type="checkbox" name="checkbox" value="check1">
+                <input class="checkbox__input" id="check1" type="radio" name="checkbox" value="check1">
                 <label class="checkbox__label" for="check1"></label>
               </div>
               <div class="choose-section__item-title">адмирал</div>
@@ -70,7 +70,7 @@
             </div>
             <div class="choose-section__item">
               <div class="checkbox">
-                <input class="checkbox__input" id="check2" type="checkbox" name="checkbox" value="check2">
+                <input class="checkbox__input" id="check2" type="radio" name="checkbox" value="check2">
                 <label class="checkbox__label" for="check2"></label>
               </div>
               <div class="choose-section__item-title">лесоруб</div>
@@ -81,7 +81,7 @@
             </div>
             <div class="choose-section__item">
               <div class="checkbox">
-                <input class="checkbox__input" id="check3" type="checkbox" name="checkbox" value="check3">
+                <input class="checkbox__input" id="check3" type="radio" name="checkbox" value="check3">
                 <label class="checkbox__label" for="check3"></label>
               </div>
               <div class="choose-section__item-title">полярник</div>
@@ -92,7 +92,7 @@
             </div>
             <div class="choose-section__item">
               <div class="checkbox">
-                <input class="checkbox__input" id="check4" type="checkbox" name="checkbox" value="check4">
+                <input class="checkbox__input" id="check4" type="radio" name="checkbox" value="check4">
                 <label class="checkbox__label" for="check4"></label>
               </div>
               <div class="choose-section__item-title">боярин</div>
@@ -103,7 +103,7 @@
             </div>
             <div class="choose-section__item">
               <div class="checkbox">
-                <input class="checkbox__input" id="check5" type="checkbox" name="checkbox" value="check5">
+                <input class="checkbox__input" id="check5" type="radio" name="checkbox" value="check5">
                 <label class="checkbox__label" for="check5"></label>
               </div>
               <div class="choose-section__item-title">мудрец</div>
@@ -118,36 +118,38 @@
       <!--section.choose-section-->
       <section class="services-section">
         <div class="container">
-          <header class="form-section__header">
-            <h3 class="form-section__title">Дополнительные услуги:</h3>
+          <header class="settings">
+            <h3 class="settings__title">Дополнительные услуги:</h3>
           </header>
-          <div class="services-section__wrap">
-            <div class="services-section__item">
-              <input class="services-section__checkbox" type="checkbox" checked="checked">
-              <label class="services-section__label">Подкрасить бороду</label>
+          <form>
+            <div class="services-section__wrap">
+              <div class="services-section__item">
+                <input class="services-section__checkbox" id="service1" type="checkbox" checked="checked" name="services">
+                <label class="services-section__label" for="service1">Подкрасить бороду</label>
+              </div>
+              <div class="services-section__item">
+                <input class="services-section__checkbox" id="service2" type="checkbox" name="services">
+                <label class="services-section__label" for="service2">Причесать бороду</label>
+              </div>
+              <div class="services-section__item">
+                <input class="services-section__checkbox" id="service3" type="checkbox" name="services">
+                <label class="services-section__label" for="service3">Убрать седину</label>
+              </div>
+              <div class="services-section__item">
+                <input class="services-section__checkbox" id="service4" type="checkbox" checked="checked" name="services">
+                <label class="services-section__label" for="service4">Накрутить усы</label>
+              </div>
+              <div class="services-section__item">
+                <input class="services-section__checkbox" id="service5" type="checkbox" name="services">
+                <label class="services-section__label" for="service5">Подровнять виски</label>
+              </div>
+              <div class="services-section__item">
+                <input class="services-section__checkbox" id="service6" type="checkbox" name="services">
+                <label class="services-section__label" for="service6">Отполировать лысину</label>
+              </div>
             </div>
-            <div class="services-section__item">
-              <input class="services-section__checkbox" type="checkbox">
-              <label class="services-section__label">Причесать бороду</label>
-            </div>
-            <div class="services-section__item">
-              <input class="services-section__checkbox" type="checkbox">
-              <label class="services-section__label">Убрать седину</label>
-            </div>
-            <div class="services-section__item">
-              <input class="services-section__checkbox" type="checkbox" checked="checked">
-              <label class="services-section__label">Накрутить усы</label>
-            </div>
-            <div class="services-section__item">
-              <input class="services-section__checkbox" type="checkbox">
-              <label class="services-section__label">Подровнять усы</label>
-            </div>
-            <div class="services-section__item">
-              <input class="services-section__checkbox" type="checkbox">
-              <label class="services-section__label">Отполировать лысину</label>
-            </div>
-          </div>
-          <button class="page-form__submit button">Отправить заявку</button>
+            <button class="services-section__submit button" type="submit">Отправить заявку</button>
+          </form>
         </div>
       </section>
       <!--section.form-section-->

@@ -1,9 +1,11 @@
 @import "../partials/_variables.scss";
+@import "../partials/_mixins.scss";
 
 .button {
   display: inline-block;
   width: 280px;
   height: 50px;
+  @include ptsans;
   font-size: 18px;
   font-weight: bold;
   line-height: 50px;
