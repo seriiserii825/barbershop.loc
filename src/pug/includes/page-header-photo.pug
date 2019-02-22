@@ -1,0 +1,31 @@
+header.page-header
+  a.page-header__logo
+    img(src="assets/i/logo-top.png" alt="Барбершоп «Бородинский»")
+    img(src="assets/i/logotype-mobile.svg" alt="Барбершоп «Бородинский»")
+    img(src="assets/i/logo-bottom.png" alt="Барбершоп «Бородинский»")
+
+  nav.main-nav.main-nav--opened.main-nav--no-js
+    button.main-nav__toggle(type="button")
+      span.visually-hidden Открыть меню
+
+    .container
+      .main-nav__wrapper
+        ul.main-nav__list.site-list
+          block main-nav
+            li.site-list__item
+              a(href="index.html") Главная
+            li.site-list__item.site-list__item--active
+              a Наши работы
+            li.site-list__item
+              a(href="#") Запсаться
+            li.site-list__item
+              a(href="form.html") Контакты
+            li.site-list__item
+              a(href="#") Html Academy
+
+        ul.main-nav__list.user-list
+          li.user-list__item
+            a.user-list__login(href="login.html") Войти
+      //main-nav__wrapper
+  //main-nav
+//page-header

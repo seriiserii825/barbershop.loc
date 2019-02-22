@@ -6,186 +6,79 @@ block title
 
 block content
 
-  header.page-header
-    a.page-header__logo
-      img.page-header__logo-image(src="assets/i/logotype-mobile.svg" width="228" height="30" alt="Барбершоп «Бородинский»")
-
-    nav.main-nav
-      button.main-nav__toggle(type="button") Работы
-
-      .main-nav__wrapper
-        ul.main-nav__list.site-list
-          block main-nav
-            li.site-list__item
-              a(href="index.html") Главная
-            li.site-list__item.site-list__item--active
-              a(href="#") Наши работы
-            li.site-list__item
-              a(href="#") Запсаться
-            li.site-list__item
-              a(href="form.html") Контакты
-            li.site-list__item
-              a(href="#") Html Academy
-
-        ul.main-nav__list.user-list
-          li.user-list__item
-            a.user-list__login(href="login.html") Войти
-      //main-nav__wrapper
-    //main-nav
-  //page-header
+  include ../includes/page-header-photo.pug
 
   main.page-main
-  section.our-works
-    .section-header
-      h2.our-works__title.section-header__title Наши работы
-      |
-      |
-      a(href="#").our-works__button.button.section-header__button На главную
+    include ../includes/after-header.pug
+    section.our-works
+      .container
+        header.page-form__header.section-header
+          h3.page-form__title.section-header__title Наши работы
+          a.page-form__button.button.button--small.section-header__button(href="index.html") На главную
+        //section-header
 
-    .our-works__list
-      .our-worsk__item
-        .our-works__picture
-          img.our-works__image(src="assets/i/our-works/1.jpg", alt="")
-          span.our-works__label.our-works__label--active Работа месяца
-        .our-works__content
-          h3.our-works__title Лжепётр Мчиславский
-          p.our-works__text Где я только не стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!
-          ul.our-works__meta.meta
-            li.meta__item
-              i.meta__picture.meta-picture--scrissors
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="20" viewBox="0 0 21 20"><g><g transform="translate(-42 -892)"><image width="21" height="20" transform="translate(42 892)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAA8UlEQVQ4T7WV0RGCMBBEHx1oB9qBpWgHWoIVOFZgCdCBlmIHWoId6KxeZg5IAsThfpiQ5LF3uQ0Vv9gCF2Bl4ydwBG42nvSoDHhN7NqNANfA3u1vBH2YwjtwtskTsAGkeJ2R2QMCB0HftsmrUjmCeq2JRRSohaXQJDBAc+m/gGVHZhYYoD7VWJqN6mQTg8AAjbWUFC78iRrYQ/3HWmJSh6BFKVV6rwjqe9nloB4s5QqZIQkL9KlQlSSZ9hhoN32fZhYclHa9HzsoQVt2TJViyPsCFbXULM1f4v1Bm5ZAc338vVBmufpy3i++pGPe/+t38gGpi1VTPRWL9QAAAABJRU5ErkJggg=="/></g></g></svg>
-              span.meta__text Стрижка
-            li.meta__item
-              i.meta__picture.meta-picture--beard
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="21" viewBox="0 0 23 21"><g><g transform="translate(-171 -890)"><image width="23" height="21" transform="translate(171 890)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAVCAYAAACt4nWrAAABm0lEQVRIS62U61UCMRSEZ1IBdoAdaAfagVYAVKBWoFaAVgBUgB1IB9KBdCAVZDyzJ9kTwrL4IP92k/vduU+SXEq6xYmPuST5JensxGyYa7gkXQJYn9DBBcmPDH8A8HJC+D3JaQO36qS+j38BYAtgcCxKqwZg9Q0cks4BbDroY5KPAIbF3UbSM4B5x/shyU//b+Ek5zHGSX4cQniSdJeUHopoS/I1xvhU2M0kjTO8CSGpN/yN5Hv+98M6OK3XAG5IzpLN2soNuiogq+o7X21IriT5bZmifF/brbrgrZ+UqkWqRVkPw4chhFFOQUeEK4YQ2hxVD1w0F7n3pOLtRWJhhrtw7oadUxcYwDiEMIwxOoK2Sw6JI/lMGxVFKB1YuSd3WwMKx4PU03vKJU0Mb0b1QOw5z10F7Lvz3Fwa7mZ303cBjqX80H1Trwae+nP5V1Jtl1b4W4ajp2t+5bNshBZuwn8d1B22A08S3T3TIzuljmYryWt7Z5F1wW04CCFMe6avnmKDvY53Z+VIQj3iY0mjeuWSXMQYrbRrTTfYb672wtUKa1d2AAAAAElFTkSuQmCC"/></g></g></svg>
-              span.meta__text Бритье
-            li.meta__item
-              i.meta__picture.meta-picture--mustache
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45" height="12" viewBox="0 0 45 12"><g><g transform="translate(-30 -937)"><image width="45" height="12" transform="translate(30 937)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAMCAYAAAD26jQJAAABVUlEQVRIS61VUXUCMRCcXQVIQMJVQXFQqoCigFcFBQX3qgCqoNQBVVAkIAEF2b65t0DeNYFL6P1edmZ2MzsR3Pc1ItICmEQwezN7B7AB8CIiCwBN9H9nZq8A9rXUUlvogtZX6g8Axrn/Zjb3xool1Ioei8gPgFEx46XgaGYPANhc0VclWkQ+AUyLmNKHt2b2XIpTI3rqoku5kudd9LYETFR1HULgYhwHFE5c8D226NPQJpz2bgD/SFVbim7NjFu+CSF8ZLa6UdUFzw0Arjri/EydVKqQf3bS2dmD0+4JYiEnz4nGcVUlqKIoye+Nzc+eVtWlmb1VEKRKuiv/TyuJyCqEsCRZfxHpWQqPH4vSPg7uUU6Ljw+TJpvXA8D5GK1iz+fSgx6flYr36+svdbc8FftAsfT4n2S5FXmcECPu0RtIpQbBvxz82kNxwnrKDIM7RKzvW1i/Iw6HR5aUnrEAAAAASUVORK5CYII="/></g></g></svg>
-              span.meta__text Усы
+        .our-works__list
+          .our-works__item.our-works__item--month-work
+            .our-works__picture
+              .our-works__image(style="background-image: url('assets/i/our-works/1.jpg')")
+              .our-works__label работа месяца
+            .our-works__content
+              h3.our-works__title Лжепётр Мчиславский
+              p.our-works__text Где я только не стригся, но так как делаете это вы — не умеет никто другой! Еще раз спасибо и до скорого!
+              ul.our-works__meta.meta
+                li.meta__item
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="20" viewBox="0 0 21 20"><g><g transform="translate(-42 -892)"><image width="21" height="20" transform="translate(42 892)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAA8UlEQVQ4T7WV0RGCMBBEHx1oB9qBpWgHWoIVOFZgCdCBlmIHWoId6KxeZg5IAsThfpiQ5LF3uQ0Vv9gCF2Bl4ydwBG42nvSoDHhN7NqNANfA3u1vBH2YwjtwtskTsAGkeJ2R2QMCB0HftsmrUjmCeq2JRRSohaXQJDBAc+m/gGVHZhYYoD7VWJqN6mQTg8AAjbWUFC78iRrYQ/3HWmJSh6BFKVV6rwjqe9nloB4s5QqZIQkL9KlQlSSZ9hhoN32fZhYclHa9HzsoQVt2TJViyPsCFbXULM1f4v1Bm5ZAc338vVBmufpy3i++pGPe/+t38gGpi1VTPRWL9QAAAABJRU5ErkJggg=="/></g></g></svg>
+                  span.meta__text Стрижка
+                li.meta__item
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="21" viewBox="0 0 23 21"><g><g transform="translate(-171 -890)"><image width="23" height="21" transform="translate(171 890)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAVCAYAAACt4nWrAAABm0lEQVRIS62U61UCMRSEZ1IBdoAdaAfagVYAVKBWoFaAVgBUgB1IB9KBdCAVZDyzJ9kTwrL4IP92k/vduU+SXEq6xYmPuST5JensxGyYa7gkXQJYn9DBBcmPDH8A8HJC+D3JaQO36qS+j38BYAtgcCxKqwZg9Q0cks4BbDroY5KPAIbF3UbSM4B5x/shyU//b+Ek5zHGSX4cQniSdJeUHopoS/I1xvhU2M0kjTO8CSGpN/yN5Hv+98M6OK3XAG5IzpLN2soNuiogq+o7X21IriT5bZmifF/brbrgrZ+UqkWqRVkPw4chhFFOQUeEK4YQ2hxVD1w0F7n3pOLtRWJhhrtw7oadUxcYwDiEMIwxOoK2Sw6JI/lMGxVFKB1YuSd3WwMKx4PU03vKJU0Mb0b1QOw5z10F7Lvz3Fwa7mZ303cBjqX80H1Trwae+nP5V1Jtl1b4W4ajp2t+5bNshBZuwn8d1B22A08S3T3TIzuljmYryWt7Z5F1wW04CCFMe6avnmKDvY53Z+VIQj3iY0mjeuWSXMQYrbRrTTfYb672wtUKa1d2AAAAAElFTkSuQmCC"/></g></g></svg>
+                  span.meta__text Бритье
+                li.meta__item
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45" height="12" viewBox="0 0 45 12"><g><g transform="translate(-30 -937)"><image width="45" height="12" transform="translate(30 937)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAMCAYAAAD26jQJAAABVUlEQVRIS61VUXUCMRCcXQVIQMJVQXFQqoCigFcFBQX3qgCqoNQBVVAkIAEF2b65t0DeNYFL6P1edmZ2MzsR3Pc1ItICmEQwezN7B7AB8CIiCwBN9H9nZq8A9rXUUlvogtZX6g8Axrn/Zjb3xool1Ioei8gPgFEx46XgaGYPANhc0VclWkQ+AUyLmNKHt2b2XIpTI3rqoku5kudd9LYETFR1HULgYhwHFE5c8D226NPQJpz2bgD/SFVbim7NjFu+CSF8ZLa6UdUFzw0Arjri/EydVKqQf3bS2dmD0+4JYiEnz4nGcVUlqKIoye+Nzc+eVtWlmb1VEKRKuiv/TyuJyCqEsCRZfxHpWQqPH4vSPg7uUU6Ljw+TJpvXA8D5GK1iz+fSgx6flYr36+svdbc8FftAsfT4n2S5FXmcECPu0RtIpQbBvxz82kNxwnrKDIM7RKzvW1i/Iw6HR5aUnrEAAAAASUVORK5CYII="/></g></g></svg>
+                  span.meta__text Усы
+          .our-works__wrap
+            .our-works__item
+              .our-works__picture
+                .our-works__image(style="background-image: url('assets/i/our-works/2.jpg')")
 
-      .our-worsk__item
-        .our-works__picture
-          img.our-works__image(src="assets/i/our-works/2.jpg", alt="")
-          span.our-works__label
-        .our-works__content
-          h3.our-works__title Саша Мальцев
-          p.our-works__text Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
-          ul.our-works__meta.meta
-            li.meta__item
-              i.meta__picture.meta-picture--scrissors
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="20" viewBox="0 0 21 20"><g><g transform="translate(-42 -892)"><image width="21" height="20" transform="translate(42 892)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAA8UlEQVQ4T7WV0RGCMBBEHx1oB9qBpWgHWoIVOFZgCdCBlmIHWoId6KxeZg5IAsThfpiQ5LF3uQ0Vv9gCF2Bl4ydwBG42nvSoDHhN7NqNANfA3u1vBH2YwjtwtskTsAGkeJ2R2QMCB0HftsmrUjmCeq2JRRSohaXQJDBAc+m/gGVHZhYYoD7VWJqN6mQTg8AAjbWUFC78iRrYQ/3HWmJSh6BFKVV6rwjqe9nloB4s5QqZIQkL9KlQlSSZ9hhoN32fZhYclHa9HzsoQVt2TJViyPsCFbXULM1f4v1Bm5ZAc338vVBmufpy3i++pGPe/+t38gGpi1VTPRWL9QAAAABJRU5ErkJggg=="/></g></g></svg>
-              span.meta__text Стрижка
+              .our-works__content
+                h3.our-works__title Саша Мальцев
+                p.our-works__text Попросил омолодить и омолодили! Кто теперь скажет, что мне 45?
+                ul.our-works__meta.meta
+                  li.meta__item
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="20" viewBox="0 0 21 20"><g><g transform="translate(-42 -892)"><image width="21" height="20" transform="translate(42 892)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAA8UlEQVQ4T7WV0RGCMBBEHx1oB9qBpWgHWoIVOFZgCdCBlmIHWoId6KxeZg5IAsThfpiQ5LF3uQ0Vv9gCF2Bl4ydwBG42nvSoDHhN7NqNANfA3u1vBH2YwjtwtskTsAGkeJ2R2QMCB0HftsmrUjmCeq2JRRSohaXQJDBAc+m/gGVHZhYYoD7VWJqN6mQTg8AAjbWUFC78iRrYQ/3HWmJSh6BFKVV6rwjqe9nloB4s5QqZIQkL9KlQlSSZ9hhoN32fZhYclHa9HzsoQVt2TJViyPsCFbXULM1f4v1Bm5ZAc338vVBmufpy3i++pGPe/+t38gGpi1VTPRWL9QAAAABJRU5ErkJggg=="/></g></g></svg>
+                    span.meta__text Стрижка
 
-      .our-worsk__item
-        .our-works__picture
-          img.our-works__image(src="assets/i/our-works/3.jpg", alt="")
-          span.our-works__label
-        .our-works__content
-          h3.our-works__title Владимир Иваныч
-          p.our-works__text К зимнему сезону — готов!
-          ul.our-works__meta.meta
-            li.meta__item
-              i.meta__picture.meta-picture--beard
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="21" viewBox="0 0 23 21"><g><g transform="translate(-171 -890)"><image width="23" height="21" transform="translate(171 890)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAVCAYAAACt4nWrAAABm0lEQVRIS62U61UCMRSEZ1IBdoAdaAfagVYAVKBWoFaAVgBUgB1IB9KBdCAVZDyzJ9kTwrL4IP92k/vduU+SXEq6xYmPuST5JensxGyYa7gkXQJYn9DBBcmPDH8A8HJC+D3JaQO36qS+j38BYAtgcCxKqwZg9Q0cks4BbDroY5KPAIbF3UbSM4B5x/shyU//b+Ek5zHGSX4cQniSdJeUHopoS/I1xvhU2M0kjTO8CSGpN/yN5Hv+98M6OK3XAG5IzpLN2soNuiogq+o7X21IriT5bZmifF/brbrgrZ+UqkWqRVkPw4chhFFOQUeEK4YQ2hxVD1w0F7n3pOLtRWJhhrtw7oadUxcYwDiEMIwxOoK2Sw6JI/lMGxVFKB1YuSd3WwMKx4PU03vKJU0Mb0b1QOw5z10F7Lvz3Fwa7mZ303cBjqX80H1Trwae+nP5V1Jtl1b4W4ajp2t+5bNshBZuwn8d1B22A08S3T3TIzuljmYryWt7Z5F1wW04CCFMe6avnmKDvY53Z+VIQj3iY0mjeuWSXMQYrbRrTTfYb672wtUKa1d2AAAAAElFTkSuQmCC"/></g></g></svg>
-              span.meta__text Бритье
-            li.meta__item
-              i.meta__picture.meta-picture--mustache
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45" height="12" viewBox="0 0 45 12"><g><g transform="translate(-30 -937)"><image width="45" height="12" transform="translate(30 937)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAMCAYAAAD26jQJAAABVUlEQVRIS61VUXUCMRCcXQVIQMJVQXFQqoCigFcFBQX3qgCqoNQBVVAkIAEF2b65t0DeNYFL6P1edmZ2MzsR3Pc1ItICmEQwezN7B7AB8CIiCwBN9H9nZq8A9rXUUlvogtZX6g8Axrn/Zjb3xool1Ioei8gPgFEx46XgaGYPANhc0VclWkQ+AUyLmNKHt2b2XIpTI3rqoku5kudd9LYETFR1HULgYhwHFE5c8D226NPQJpz2bgD/SFVbim7NjFu+CSF8ZLa6UdUFzw0Arjri/EydVKqQf3bS2dmD0+4JYiEnz4nGcVUlqKIoye+Nzc+eVtWlmb1VEKRKuiv/TyuJyCqEsCRZfxHpWQqPH4vSPg7uUU6Ljw+TJpvXA8D5GK1iz+fSgx6flYr36+svdbc8FftAsfT4n2S5FXmcECPu0RtIpQbBvxz82kNxwnrKDIM7RKzvW1i/Iw6HR5aUnrEAAAAASUVORK5CYII="/></g></g></svg>
-              span.meta__text Усы
+            .our-works__item
+              .our-works__picture
+                .our-works__image(style="background-image: url('assets/i/our-works/3.jpg')")
 
-      .our-worsk__item
-        .our-works__picture
-          img.our-works__image(src="assets/i/our-works/4.jpg", alt="")
-          span.our-works__label
-        .our-works__content
-          h3.our-works__title Винстон Синий
-          p.our-works__text Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!
-          ul.our-works__meta.meta
-            li.meta__item
-              i.meta__picture.meta-picture--scrissors
-                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="20" viewBox="0 0 21 20"><g><g transform="translate(-42 -892)"><image width="21" height="20" transform="translate(42 892)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAA8UlEQVQ4T7WV0RGCMBBEHx1oB9qBpWgHWoIVOFZgCdCBlmIHWoId6KxeZg5IAsThfpiQ5LF3uQ0Vv9gCF2Bl4ydwBG42nvSoDHhN7NqNANfA3u1vBH2YwjtwtskTsAGkeJ2R2QMCB0HftsmrUjmCeq2JRRSohaXQJDBAc+m/gGVHZhYYoD7VWJqN6mQTg8AAjbWUFC78iRrYQ/3HWmJSh6BFKVV6rwjqe9nloB4s5QqZIQkL9KlQlSSZ9hhoN32fZhYclHa9HzsoQVt2TJViyPsCFbXULM1f4v1Bm5ZAc338vVBmufpy3i++pGPe/+t38gGpi1VTPRWL9QAAAABJRU5ErkJggg=="/></g></g></svg>
-              span.meta__text Стрижка
-    //.our-works__list
+              .our-works__content
+                h3.our-works__title Владимир Иваныч
+                p.our-works__text К зимнему сезону — готов!
+                ul.our-works__meta.meta
+                  li.meta__item
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23" height="21" viewBox="0 0 23 21"><g><g transform="translate(-171 -890)"><image width="23" height="21" transform="translate(171 890)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABcAAAAVCAYAAACt4nWrAAABm0lEQVRIS62U61UCMRSEZ1IBdoAdaAfagVYAVKBWoFaAVgBUgB1IB9KBdCAVZDyzJ9kTwrL4IP92k/vduU+SXEq6xYmPuST5JensxGyYa7gkXQJYn9DBBcmPDH8A8HJC+D3JaQO36qS+j38BYAtgcCxKqwZg9Q0cks4BbDroY5KPAIbF3UbSM4B5x/shyU//b+Ek5zHGSX4cQniSdJeUHopoS/I1xvhU2M0kjTO8CSGpN/yN5Hv+98M6OK3XAG5IzpLN2soNuiogq+o7X21IriT5bZmifF/brbrgrZ+UqkWqRVkPw4chhFFOQUeEK4YQ2hxVD1w0F7n3pOLtRWJhhrtw7oadUxcYwDiEMIwxOoK2Sw6JI/lMGxVFKB1YuSd3WwMKx4PU03vKJU0Mb0b1QOw5z10F7Lvz3Fwa7mZ303cBjqX80H1Trwae+nP5V1Jtl1b4W4ajp2t+5bNshBZuwn8d1B22A08S3T3TIzuljmYryWt7Z5F1wW04CCFMe6avnmKDvY53Z+VIQj3iY0mjeuWSXMQYrbRrTTfYb672wtUKa1d2AAAAAElFTkSuQmCC"/></g></g></svg>
+                    span.meta__text Бритье
+                  li.meta__item
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="45" height="12" viewBox="0 0 45 12"><g><g transform="translate(-30 -937)"><image width="45" height="12" transform="translate(30 937)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAC0AAAAMCAYAAAD26jQJAAABVUlEQVRIS61VUXUCMRCcXQVIQMJVQXFQqoCigFcFBQX3qgCqoNQBVVAkIAEF2b65t0DeNYFL6P1edmZ2MzsR3Pc1ItICmEQwezN7B7AB8CIiCwBN9H9nZq8A9rXUUlvogtZX6g8Axrn/Zjb3xool1Ioei8gPgFEx46XgaGYPANhc0VclWkQ+AUyLmNKHt2b2XIpTI3rqoku5kudd9LYETFR1HULgYhwHFE5c8D226NPQJpz2bgD/SFVbim7NjFu+CSF8ZLa6UdUFzw0Arjri/EydVKqQf3bS2dmD0+4JYiEnz4nGcVUlqKIoye+Nzc+eVtWlmb1VEKRKuiv/TyuJyCqEsCRZfxHpWQqPH4vSPg7uUU6Ljw+TJpvXA8D5GK1iz+fSgx6flYr36+svdbc8FftAsfT4n2S5FXmcECPu0RtIpQbBvxz82kNxwnrKDIM7RKzvW1i/Iw6HR5aUnrEAAAAASUVORK5CYII="/></g></g></svg>
+                    span.meta__text Усы
 
-    .our-works__price-list.price-list
-      h2.price-list__title Прейскурант
+            .our-works__item
+              .our-works__picture
+                .our-works__image(style="background-image: url('assets/i/our-works/4.jpg')")
 
-    table.our-works__table.price-table
-      tr
-        td.price-table__num 1
-        td.price-table__name
-          span.price-table__haircut Классическая стрижка
-          span.price-table__description (с мытьем головы)
-        td.price-table__description-tablet с мытьем головы
-        td.price-table__price 1500 руб.
-
-      tr
-        td.price-table__num 2
-        td.price-table__name
-          span.price-table__haircut Современный вариант
-          span.price-table__description (с мытьем головы)
-        td.price-table__description-tablet с мытьем головы
-        td.price-table__price 1500 руб.
-
-      tr
-        td.price-table__num 3
-        td.price-table__name
-          span.price-table__haircut Индивидуальный подход
-          span.price-table__description (с мытьем головы)
-        td.price-table__description-tablet с мытьем головы
-        td.price-table__price 2000 руб.
-
-      tr
-        td.price-table__num 4
-        td.price-table__name
-          span.price-table__haircut Бритье бороды
-          span.price-table__description (без мытья)
-        td.price-table__description-tablet без мытья
-        td.price-table__price 500 руб.
-
-      tr
-        td.price-table__num 3
-        td.price-table__name
-          span.price-table__haircut Бритье головы
-          span.price-table__description (с мытьем головы)
-        td.price-table__description-tablet с мытьем головы
-        td.price-table__price 1000 руб.
-    //table.our-works__table.price-table
-
-    .our-works__clock-wrap
-      .our-works__clock.clock
-      .clock__time
-        | C <span class="clock__before">10:00</span> до <span class="clock__after">14:00</span> скидка <span class="clock__percent">20%</span>
-    //.our-works__clock
-
-
-    //.our-works__price-list.price-list
+              .our-works__content
+                h3.our-works__title Винстон Синий
+                p.our-works__text Как только заростаю и волосы начинают мешать видеть — бегом в Бородинский!
+                ul.our-works__meta.meta
+                  li.meta__item
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="21" height="20" viewBox="0 0 21 20"><g><g transform="translate(-42 -892)"><image width="21" height="20" transform="translate(42 892)" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABUAAAAUCAYAAABiS3YzAAAA8UlEQVQ4T7WV0RGCMBBEHx1oB9qBpWgHWoIVOFZgCdCBlmIHWoId6KxeZg5IAsThfpiQ5LF3uQ0Vv9gCF2Bl4ydwBG42nvSoDHhN7NqNANfA3u1vBH2YwjtwtskTsAGkeJ2R2QMCB0HftsmrUjmCeq2JRRSohaXQJDBAc+m/gGVHZhYYoD7VWJqN6mQTg8AAjbWUFC78iRrYQ/3HWmJSh6BFKVV6rwjqe9nloB4s5QqZIQkL9KlQlSSZ9hhoN32fZhYclHa9HzsoQVt2TJViyPsCFbXULM1f4v1Bm5ZAc338vVBmufpy3i++pGPe/+t38gGpi1VTPRWL9QAAAABJRU5ErkJggg=="/></g></g></svg>
+                    span.meta__text Стрижка
+        //.our-works__list
+    include ../includes/price-list.pug
   //page-main
 
-  footer.page-footer
-    .page-footer__wrapper
-      .page-footer__contacts.contacts
-        h3.contacts__title Барбершоп «Бородинский»
-        p.contacts__text
-          | г. Санкт-Петербург, ул. Большая Конюшенная 19/8
-        |
-        |
-        a.contacts__phone(href="tel:+78125556666")
-          <span>Тел.:</span>  +7 (812) 555-66-66
-      .page-footer__social.social
-        h3.social__title Давайте дружить!
-        ul.social__list
-          li.social__item
-            a.social__link.social__link--vk(href="#") Мы в Вконтакте
-          li.social__item
-            a.social__link.social__link--facebook(href="#") Мы в фейсбуке
-          li.social__item
-            a.social__link.social__link--instagram(href="#") Мы в Инстаграме
-      .page-footer__copyright.copyright
-        h3.copyright__title Разработано:
-        a.copyright__link.button(href="#") HTML Academy
-  //footer.page-footer
+  include ../includes/page-footer.pug
   |
   |
 block comment-scripts

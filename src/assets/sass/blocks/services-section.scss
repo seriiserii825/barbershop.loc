@@ -3,7 +3,7 @@
 
 .services-section {
   position: relative;
-  background: $services-section-bg;
+  background: $section-bg;
 
   &::after {
     @media screen and (max-width: 320px) {

@@ -16,6 +16,11 @@ ul {
   @include reset-list;
 }
 
+img{
+  max-width: 100%;
+  height: auto;
+}
+
 h1,
 h2,
 h3,
@@ -82,4 +87,8 @@ a {
 @import "blocks/choose-section.scss";
 @import "blocks/settings-section-header.scss";
 @import "blocks/services-section.scss";
+@import "blocks/our-works.scss";
+@import "blocks/price-list.scss";
+@import "blocks/price-table.scss";
+@import "blocks/clock.scss";
 @import "blocks/footer.scss";
