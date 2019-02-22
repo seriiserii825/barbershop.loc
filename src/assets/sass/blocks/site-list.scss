@@ -57,6 +57,7 @@
     background: $accent-color;
     border-top: 1px solid $accent-color-lightnest;
     border-bottom: 1px solid $accent-color-darknest;
+    transition: all .4s ease;
 
     @media screen and (min-width: $md) {
       padding: 0;
@@ -66,13 +67,13 @@
       border: none;
     }
 
-    &[href]:hover {
+    &:hover {
       background: #755a46;
       border-top-color: #755a46;
 
       @media screen and (min-width: $md) {
-        color: $accent-color;
-        background: $black-color;
+        color: #000;
+        background: #fff;
       }
     }
 
@@ -82,9 +83,8 @@
       border-top-color: #6a4d38;
 
       @media screen and (min-width: $md) {
-        color: $white-color;
-        background: $black-color;
-        opacity: 0.3;
+        color: rgba(0,0,0,.3);
+        background: #fff;
       }
     }
   }

@@ -2,7 +2,9 @@
 @import "../partials/_mixins.scss";
 
 .our-works {
+  position: relative;
   background: $section-bg;
+  z-index: 3;
 }
 
 .our-works__item {

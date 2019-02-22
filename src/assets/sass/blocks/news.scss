@@ -69,6 +69,7 @@
   align-items: flex-start;
   padding: 20px;
 
+
   &:last-child {
     @media screen and (min-width: $md) {
       display: none;
@@ -83,6 +84,17 @@
 .news__text {
   margin-top: 0;
   width: 210px;
+  color: #000;
+
+  &:hover {
+    text-decoration: underline;
+    color: #826550;
+  }
+
+  &:active {
+    text-decoration: underline;
+    color: #6a4d38;
+  }
 }
 
 .news__time {
@@ -96,6 +108,14 @@
   height: 50px;
   color: $white-color;
   background: #000;
+
+  &:hover {
+    background-color: #6a4d38;
+    cursor: pointer;
+    &::after {
+      border-top-color: #6a4d38;
+    }
+  }
 
   @media screen and (min-width: $md) {
     margin-right: 20px;

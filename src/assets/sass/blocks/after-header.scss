@@ -4,6 +4,7 @@
   position: relative;
   height: 262px;
   margin-bottom: -262px;
+  z-index: 2;
   @media screen and (max-width: $md) {
     display: none;
   }

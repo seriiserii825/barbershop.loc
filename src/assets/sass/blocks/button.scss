@@ -13,6 +13,10 @@
   text-transform: uppercase;
   color: #000;
   border: 1px solid #e5ddd5;
+  &:active {
+    color: rgba(0,0,0,.3);
+    background-color: #d5c9bd;
+  }
 
   &--small {
     width: 160px;

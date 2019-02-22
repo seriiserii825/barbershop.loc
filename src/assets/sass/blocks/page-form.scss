@@ -2,7 +2,9 @@
 @import "../partials/mixins";
 
 .page-form {
+  position: relative;
   background: #f8f5f2;
+  z-index: 3;
 
   input,
   textarea {
@@ -17,6 +19,9 @@
 
   input {
     height: 50px;
+    &:focus {
+      border: 1px solid #999999;
+    }
   }
 
   textarea {
