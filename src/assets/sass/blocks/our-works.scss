@@ -18,6 +18,13 @@
 
 .our-works__picture {
   position: relative;
+
+  img {
+    @media screen and (min-width: $md) {
+      max-width: none;
+      width: 270px;
+    }
+  }
 }
 
 .our-works__label {
@@ -68,29 +75,6 @@
   }
 }
 
-.our-works__image {
-  width: 280px;
-  height: 176px;
-  background-repeat: no-repeat;
-  background-position: center top;
-  @media screen and (min-width: $md) {
-    height: 293px;
-  }
-}
-
-.our-works__item.our-works__item--month-work {
-    .our-works__image {
-      width: 280px;
-      height: 480px;
-      background-position: right top;
-    }
-
-    .our-works__text {
-      @media screen and (min-width: $xl) {
-        width: 300px;
-      }
-    }
-}
 
 .our-works__content {
   padding: 24px;

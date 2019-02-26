@@ -1,8 +1,9 @@
 header.page-header
   a.page-header__logo
-    img(src="assets/i/logo-top.png" alt="Барбершоп «Бородинский»")
-    img(src="assets/i/logotype-mobile.svg" alt="Барбершоп «Бородинский»")
-    img(src="assets/i/logo-bottom.png" alt="Барбершоп «Бородинский»")
+    picture
+      source(media="(min-width: 1200px)", srcset="assets/i/logo/logotype-desktop.svg")
+      source(media="(min-width: 768px)", srcset="assets/i/logo/logotype-tablet.svg")
+      img(src="assets/i/logo/logotype-mobile.svg" alt="Барбершоп «Бородинский»")
 
   nav.main-nav.main-nav--opened.main-nav--no-js
     button.main-nav__toggle(type="button")

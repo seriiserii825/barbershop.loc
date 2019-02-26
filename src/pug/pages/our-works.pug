@@ -20,7 +20,9 @@ block content
         .our-works__list
           .our-works__item.our-works__item--month-work
             .our-works__picture
-              .our-works__image(style="background-image: url('assets/i/our-works/1.jpg')")
+              picture
+                source(media="(min-width: 768px)", srcset="assets/i/our-works/1-tablet.jpg")
+                img.our-works__image(src="assets/i/our-works/1-mobile.jpg" alt="")
               .our-works__label работа месяца
             .our-works__content
               h3.our-works__title Лжепётр Мчиславский
@@ -38,7 +40,9 @@ block content
           .our-works__wrap
             .our-works__item
               .our-works__picture
-                .our-works__image(style="background-image: url('assets/i/our-works/2.jpg')")
+                picture
+                  source(media="(min-width: 768px)", srcset="assets/i/our-works/2-tablet.jpg")
+                  img.our-works__image(src="assets/i/our-works/2-mobile.jpg" alt="")
 
               .our-works__content
                 h3.our-works__title Саша Мальцев
@@ -50,7 +54,9 @@ block content
 
             .our-works__item
               .our-works__picture
-                .our-works__image(style="background-image: url('assets/i/our-works/3.jpg')")
+                picture
+                  source(media="(min-width: 768px)", srcset="assets/i/our-works/3-tablet.jpg")
+                  img.our-works__image(src="assets/i/our-works/3-mobile.jpg" alt="")
 
               .our-works__content
                 h3.our-works__title Владимир Иваныч
@@ -65,7 +71,9 @@ block content
 
             .our-works__item
               .our-works__picture
-                .our-works__image(style="background-image: url('assets/i/our-works/4.jpg')")
+                picture
+                  source(media="(min-width: 768px)", srcset="assets/i/our-works/4-tablet.jpg")
+                  img.our-works__image(src="assets/i/our-works/4-mobile.jpg" alt="")
 
               .our-works__content
                 h3.our-works__title Винстон Синий
