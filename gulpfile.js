@@ -33,7 +33,7 @@ gulp.task('pug', function(){
 //=======================
 
 gulp.task("css", function(){
-	return gulp.src('src/assets/sass/**/*.scss')
+	return gulp.src('src/assets/sass/style.scss')
   .pipe(gp.sourcemaps.init())
   .pipe(gp.wait(500))
 	.pipe(sass({outputStyle: 'expanded'}).on('error', notify.onError(function (error) {
