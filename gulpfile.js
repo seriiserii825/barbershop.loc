@@ -39,11 +39,11 @@ gulp.task("css", function(){
 	.pipe(sass({outputStyle: 'expanded'}).on('error', notify.onError(function (error) {
 		return 'An error occurred while compiling sass.\nLook in the console for details.\n' + error;
 	})))
+	.pipe(gp.sourcemaps.write())
 	.pipe(gp.plumber())
 	.pipe(gp.autoprefixer({
 		cascade: false
 	}))
-	.pipe(gp.sourcemaps.write())
 	.pipe(gulp.dest('build/assets/css/'))
 	.pipe(browserSync.reload({stream: true}));
 	// .pipe(gp.notify("Change css"));
