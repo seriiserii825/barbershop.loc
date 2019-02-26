@@ -1,18 +1,22 @@
 'use strict';
 
 let gulp = require('gulp'),
+//css
 sass = require('gulp-sass'),
-wait = require('gulp-wait'),
-pug = require('gulp-pug'),
+stylelint = require("stylelint"),
 autoprefixer = require("gulp-autoprefixer"),
 sourcemaps = require('gulp-sourcemaps'),
+wait = require('gulp-wait'),
+//html
+pug = require('gulp-pug'),
+//js
+babel = require("gulp-babel"),
+//settings
 notify = require("gulp-notify"),
 rigger = require("gulp-rigger"),
 plumber = require("gulp-plumber"),
 browserSync = require('browser-sync').create(),
 rimraf = require("rimraf"),
-babel = require("gulp-babel"),
-stylelint = require("stylelint"),
 gp = require('gulp-load-plugins')();
 
 
