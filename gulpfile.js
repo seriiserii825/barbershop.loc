@@ -11,6 +11,8 @@ wait = require('gulp-wait'),
 pug = require('gulp-pug'),
 //js
 babel = require("gulp-babel"),
+//svg
+svgSprite = require("gulp-svg-sprites"),
 //settings
 notify = require("gulp-notify"),
 rigger = require("gulp-rigger"),
@@ -20,6 +22,11 @@ rimraf = require("rimraf"),
 gp = require('gulp-load-plugins')();
 
 
+gulp.task('svg-sprite-bg', function () {
+  return gulp.src('src/assets/i/svg/bg/*.svg')
+      .pipe(svgSprite())
+      .pipe(gulp.dest("build/assets/svg/bg/"));
+});
 
 gulp.task('pug', function(){
   return gulp.src('src/pug/pages/*.pug')
@@ -109,6 +116,7 @@ gulp.task("watch", function(){
   gulp.watch('src/pug/**/*.pug', gulp.series('pug'));
   gulp.watch('src/assets/js/**/*.js', gulp.series('js'));
   gulp.watch(['src/assets/i/**/*.*'], gulp.series("image"));
+  gulp.watch(['src/assets/i/svg/bg/*.*'], gulp.series("svg-sprite-bg"));
   gulp.watch(['src/assets/fonts/**/*.*'], gulp.series("fonts"));
   /*watch('src/assets/audio/!**!/!*.*', function(event, cb){
       gulp.start("audio");
@@ -127,7 +135,16 @@ gulp.task('browser-sync', function(){
 
 gulp.task('default', gulp.series(
     'clean',
-	gulp.parallel('pug', 'css', 'js', 'fonts', 'image', 'libs', 'favicon'),
+	gulp.parallel(
+    'pug',
+    'css',
+    'js',
+    'svg-sprite-bg',
+    'fonts',
+    'image',
+    'libs',
+    'favicon'
+  ),
 	gulp.parallel('watch', 'browser-sync')
 ));
 
