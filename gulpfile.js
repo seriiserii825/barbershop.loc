@@ -104,12 +104,8 @@ gulp.task("watch", function(){
   gulp.watch('src/assets/sass/**/*.scss', gulp.series('css'));
   gulp.watch('src/pug/**/*.pug', gulp.series('pug'));
   gulp.watch('src/assets/js/**/*.js', gulp.series('js'));
-  gulp.watch(['src/assets/i/**/*.*'], function(event, cb){
-    gulp.start("image");
-  });
-  gulp.watch(['src/assets/fonts/**/*.*'], function(event, cb){
-    gulp.start("fonts");
-  });
+  gulp.watch(['src/assets/i/**/*.*'], gulp.series("image"));
+  gulp.watch(['src/assets/fonts/**/*.*'], gulp.series("fonts"));
   /*watch('src/assets/audio/!**!/!*.*', function(event, cb){
       gulp.start("audio");
   });*/

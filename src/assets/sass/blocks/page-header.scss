@@ -14,31 +14,31 @@
       align-items: center;
       padding-top: 57px;
       height: 397px;
-      text-align: center;
-      background: #000 url("../i/header-bg.jpg") no-repeat center;
+      background-color: #000;
+      background-image: url("../i/page-header/header-bg.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
       background-size: cover;
       order: 2;
 
-
+      @media (min-resolution: 144dpi),
+            (min-resolution: 1.5dppx) {
+        background-image: url("../i/page-header/header-bg-x2.jpg");
+      }
     }
     @media screen and (min-width: $xl) {
       height: 648px;
     }
-    img:first-child {
-      display: none;
-      @media screen and (min-width: $md) {
-        display: inline-block;
-        margin-bottom: 16px;
-      }
+  }
+
+  img {
+    @media screen and (min-width: $md) {
+      width: 380px;
+      height: 112px;
     }
-    img:nth-child(2) {
-      @media screen and (min-width: $md) {
-        width: 376px;
-        height: auto;
-      }
-    }
-    img:last-child {
-      display: none;
+    @media screen and (min-width: $xl) {
+      width: 380px;
+      height: 165px;
     }
   }
 }
