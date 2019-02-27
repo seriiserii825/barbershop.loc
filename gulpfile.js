@@ -33,24 +33,6 @@ gulp.task('svg', function () {
         pretty: true
       }
     }))
-    // .pipe(cheerio({
-    //   run: function ($) {
-    //     $('fill').remove();
-    //     $('stroke').remove();
-    //     $('style').remove();
-    //     $('class').remove();
-    //   },
-    //   parserOptions: {xmlMode: true}
-    // }))
-    // .pipe(gp.cheerio({
-    //   run: function ($) {
-		// 		$('fill').remove();
-		// 		$('stroke').remove();
-		// 		$('style').remove();
-		// 		$('class').remove();
-    //   },
-    //   parserOptions: {xmlMode: true}
-    // }))
     .pipe(gp.cheerio(clean(
       {
         removeSketchType: true,
@@ -98,6 +80,7 @@ gulp.task('pug', function () {
 
 gulp.task("css", function () {
   return gulp.src('src/assets/sass/style.scss')
+    .pipe(gp.plumber())
     .pipe(gp.sourcemaps.init())
     .pipe(gp.wait(500))
     .pipe(sass({
@@ -106,7 +89,6 @@ gulp.task("css", function () {
       return 'An error occurred while compiling sass.\nLook in the console for details.\n' + error;
     })))
     .pipe(gp.sourcemaps.write())
-    .pipe(gp.plumber())
     .pipe(gp.autoprefixer({
       cascade: false
     }))
