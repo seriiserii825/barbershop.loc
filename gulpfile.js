@@ -7,10 +7,12 @@ let gulp = require('gulp'),
   autoprefixer = require("gulp-autoprefixer"),
   sourcemaps = require('gulp-sourcemaps'),
   wait = require('gulp-wait'),
+  csso = require('gulp-csso'),
   //html
   pug = require('gulp-pug'),
   //js
   babel = require("gulp-babel"),
+  uglify = require('gulp-uglify'),
   //svg
   cheerio = require('gulp-cheerio'),
   svgmin = require('gulp-svgmin'),
@@ -71,8 +73,8 @@ gulp.task('pug', function () {
     .pipe(gulp.dest('build/'))
     .pipe(browserSync.reload({
       stream: true
-    }))
-    .on('end', browserSync.reload);
+    }));
+    // .on('end', browserSync.reload);
   // .pipe(gp.notify("Change html"));
 });
 
@@ -88,10 +90,13 @@ gulp.task("css", function () {
     }).on('error', notify.onError(function (error) {
       return 'An error occurred while compiling sass.\nLook in the console for details.\n' + error;
     })))
-    .pipe(gp.sourcemaps.write())
     .pipe(gp.autoprefixer({
       cascade: false
     }))
+    .pipe(gulp.dest('build/assets/css/'))
+    .pipe(gp.csso())
+    .pipe(gp.rename("style.min.css"))
+    .pipe(gp.sourcemaps.write())
     .pipe(gulp.dest('build/assets/css/'))
     .pipe(browserSync.reload({
       stream: true
@@ -131,6 +136,9 @@ gulp.task("js", function () {
     .pipe(gp.babel({
       presets: ['@babel/env']
     }))
+    .pipe(gulp.dest('build/assets/js'))
+    .pipe(gp.uglify())
+    .pipe(gp.rename("main.min.js"))
     .pipe(gp.sourcemaps.write())
     .pipe(gulp.dest('build/assets/js'))
     .pipe(browserSync.reload({
