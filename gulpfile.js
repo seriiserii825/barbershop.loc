@@ -21,7 +21,10 @@ let gulp = require('gulp'),
   clean   = require('gulp-cheerio-clean-svg'),
   //images
   webp = require('gulp-webp'),
+  imagemin = require('gulp-imagemin'),
   //settings
+  newer = require("gulp-newer"),
+  debug = require("gulp-debug"),
   notify = require("gulp-notify"),
   rigger = require("gulp-rigger"),
   plumber = require("gulp-plumber"),
@@ -29,9 +32,9 @@ let gulp = require('gulp'),
   rimraf = require("rimraf"),
   gp = require('gulp-load-plugins')();
 
-
 gulp.task('svg', function () {
-  return gulp.src('src/assets/i/svg/icon-*.svg')
+  return gulp.src('src/assets/i/svg/icon-*.svg', {since: gulp.lastRun('svg')})
+  .pipe(gp.newer('build/assets/i/svg/sprite/'))
     .pipe(gp.svgmin({
       js2svg: {
         pretty: true
@@ -69,7 +72,9 @@ gulp.task('svg', function () {
 
 
 gulp.task('pug', function () {
-  return gulp.src('src/pug/pages/*.pug')
+  return gulp.src('src/pug/pages/*.pug', {since: gulp.lastRun('pug')})
+    .pipe(gp.newer('build/'))
+    .pipe(gp.debug({title: "pug"}))
     .pipe(gp.pug({
       pretty: true
     }))
@@ -110,7 +115,8 @@ gulp.task("css", function () {
 //============================
 
 gulp.task("libs", function () {
-  return gulp.src('src/assets/libs/**/*.*')
+  return gulp.src('src/assets/libs/**/*.*', {since: gulp.lastRun('libs')})
+    .pipe(gp.newer('src/assets/libs/**/*.*'))
     .pipe(gulp.dest('build/assets/libs'))
     .on('end', browserSync.reload);
 });
@@ -126,14 +132,17 @@ gulp.task("favicon", function () {
 /* fonts:build
 ====================================================*/
 gulp.task("fonts", function () {
-  return gulp.src('src/assets/fonts/**/*.*')
+  return gulp.src('src/assets/fonts/**/*.*', {since: gulp.lastRun('fonts')})
+    .pipe(gp.newer('build/assets/fonts'))
     .pipe(gulp.dest('build/assets/fonts'))
     .on('end', browserSync.reload);
 });
 
 
 gulp.task("webp", function () {
-  return gulp.src('src/assets/i/**/*.{jpg, png}')
+  return gulp.src('src/assets/i/**/*.{jpg, png}', {since: gulp.lastRun('webp')})
+    .pipe(gp.newer('build/assets/i'))
+    .pipe(gp.debug({title: "webp"}))
     .pipe(webp())
     .pipe(gulp.dest('build/assets/i'))
     .on('end', browserSync.reload);
@@ -161,8 +170,14 @@ gulp.task("js", function () {
 /* image:dev
 ====================================================*/
 gulp.task("image", function () {
-  return gulp.src('src/assets/i/**/*.*')
-    .pipe(gp.plumber())
+  return gulp.src('src/assets/i/**/*.*', {since: gulp.lastRun('image')})
+    .pipe(gp.newer('build/assets/i'))
+    .pipe(gp.debug({title: "image"}))
+    .pipe(gp.imagemin([
+      imagemin.optipng({optimizationLevel: 3}),
+      imagemin.jpegtran({progressive: true}),
+      imagemin.svgo(),
+    ]))
     .pipe(gulp.dest('build/assets/i'))
     .pipe(browserSync.reload({
       stream: true
