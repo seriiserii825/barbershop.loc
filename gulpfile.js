@@ -19,6 +19,8 @@ let gulp = require('gulp'),
   rename = require('gulp-rename'),
   svgSprite = require('gulp-svg-sprite'),
   clean   = require('gulp-cheerio-clean-svg'),
+  //images
+  webp = require('gulp-webp'),
   //settings
   notify = require("gulp-notify"),
   rigger = require("gulp-rigger"),
@@ -29,7 +31,7 @@ let gulp = require('gulp'),
 
 
 gulp.task('svg', function () {
-  return gulp.src('src/assets/i/svg/inline/*.svg')
+  return gulp.src('src/assets/i/svg/icon-*.svg')
     .pipe(gp.svgmin({
       js2svg: {
         pretty: true
@@ -64,6 +66,7 @@ gulp.task('svg', function () {
     }))
     .pipe(gulp.dest("build/assets/i/svg/sprite/"));
 });
+
 
 gulp.task('pug', function () {
   return gulp.src('src/pug/pages/*.pug')
@@ -125,6 +128,14 @@ gulp.task("favicon", function () {
 gulp.task("fonts", function () {
   return gulp.src('src/assets/fonts/**/*.*')
     .pipe(gulp.dest('build/assets/fonts'))
+    .on('end', browserSync.reload);
+});
+
+
+gulp.task("webp", function () {
+  return gulp.src('src/assets/i/**/*.{jpg, png}')
+    .pipe(webp())
+    .pipe(gulp.dest('build/assets/i'))
     .on('end', browserSync.reload);
 });
 
@@ -190,6 +201,7 @@ gulp.task('default', gulp.series(
     'pug',
     'css',
     'js',
+    'webp',
     'svg',
     'fonts',
     'image',

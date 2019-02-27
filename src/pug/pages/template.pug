@@ -1,8 +1,16 @@
 doctype html
 html(lang="ru_RU")
   head
-    block links
-    block title
+    meta(name="viewport"
+    content="width=device-width,initial-scale=1.0")
+
+    meta(charset="utf-8")
+
+    block append css
+      link(rel="stylesheet" type="text/css" href="assets/css/style.min.css")
+
+    title
+      block title
 
   body
     block content
