@@ -9,19 +9,18 @@
     line-height: 18px;
     text-decoration: none;
     color: $white-color;
+  }
 
-    &-icon {
-      position: absolute;
-      top: 17px;
-      left: 21px;
-      width: 16px;
-      height: 16px;
-      opacity: 0.3;
+  .user-login {
+    fill: white;
+    stroke: none;
+    position: absolute;
+    top: 17px;
+    left: 21px;
+    width: 16px;
+    height: 16px;
+    opacity: 0.3;
 
-      polygon {
-        fill: #555;
-      }
-    }
   }
 
   @media screen and (min-width: $md) {
@@ -41,14 +40,10 @@
       height: 70px;
       font-size: 0;
 
-      &-icon {
+      .user-login {
         top: 29px;
         left: 12px;
         opacity: 1;
-
-        polygon {
-          fill: red;
-        }
       }
     }
   }
