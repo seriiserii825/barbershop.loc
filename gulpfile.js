@@ -104,7 +104,7 @@ gulp.task("css", function () {
     .pipe(gulp.dest('build/assets/css/'))
     .pipe(gp.csso())
     .pipe(gp.rename("style.min.css"))
-    .pipe(gp.sourcemaps.write())
+    .pipe(gp.sourcemaps.write('.'))
     .pipe(gulp.dest('build/assets/css/'))
     .pipe(browserSync.reload({
       stream: true
@@ -172,12 +172,12 @@ gulp.task("js", function () {
 gulp.task("image", function () {
   return gulp.src('src/assets/i/**/*.*', {since: gulp.lastRun('image')})
     .pipe(gp.newer('build/assets/i'))
-    .pipe(gp.debug({title: "image"}))
-    .pipe(gp.imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.svgo(),
-    ]))
+    // .pipe(gp.debug({title: "image"}))
+    // .pipe(gp.imagemin([
+    //   imagemin.optipng({optimizationlevel: 3}),
+    //   imagemin.jpegtran({progressive: true}),
+    //   imagemin.svgo(),
+    // ]))
     .pipe(gulp.dest('build/assets/i'))
     .pipe(browserSync.reload({
       stream: true
@@ -216,7 +216,7 @@ gulp.task('default', gulp.series(
     'pug',
     'css',
     'js',
-    'webp',
+    // 'webp',
     'svg',
     'fonts',
     'image',
