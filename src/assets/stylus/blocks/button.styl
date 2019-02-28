@@ -1,0 +1,22 @@
+@import '../partials/variables'
+@import '../partials/mixins'
+.button
+  display: inline-block
+  width: 280px
+  height: 50px
+  ptsans()
+  font-size: 18px
+  font-weight: bold
+  line-height: 50px
+  text-align: center
+  text-transform: uppercase
+  color: #000
+  border: 1px solid #e5ddd5
+  &:active
+    color: rgba(0, 0, 0, 0.3)
+    background-color: #d5c9bd
+  &--small
+    width: 160px
+  &__wrap
+    display: table
+    margin: 0 auto

@@ -1,0 +1,158 @@
+@import '../partials/variables'
+@import '../partials/mixins'
+.stats
+  &__header
+    position: relative
+    padding: 30px 40px 25px 40px
+    min-height: 130px
+    color: #000
+    background: #fff
+    z-index: 3
+  &__slogan
+    display: block
+    margin-bottom: 15px
+    margin-left: auto
+    margin-right: auto
+    width: 180px
+    font-size: 30px
+    font-weight: bold
+    line-height: 30px
+    text-align: center
+    text-transform: uppercase
+  &__intro
+    margin: 0
+    font-size: 20px
+    line-height: 27px
+    text-align: center
+  &__legend
+    display: block
+    font-size: 20px
+    line-height: 20px
+    &--top
+      display: none
+    &--bottom
+      padding-top: 20px
+      padding-bottom: 14px
+      text-align: center
+      color: rgba(255, 255, 255, 0.3)
+      background: $black-lighter-color
+  &__list
+    width: 100%
+    height: 320px
+    border-collapse: collapse
+    tr
+      color: #fff
+      background-color: #404040
+      &:nth-child(2)
+        background-color: #4e4e4e
+      &:nth-child(3)
+        background-color: #353535
+      &:nth-child(4)
+        background-color: #404040
+  &__value,
+  &__field
+    padding: 20px
+    padding-bottom: 19px
+    width: 50%
+    vertical-align: top
+  &__value
+    padding-right: 0
+    font-size: 40px
+    line-height: 40px
+    sup
+      margin-top: -0.35em
+      margin-left: 5px
+  &__field
+    padding-left: 0
+    font-size: 18px
+    line-height: 18px
+    text-align: right
+@media screen and (min-width: $md)
+  .stats
+    margin-top: -185px
+    margin-bottom: 26px
+    width: 640px
+    min-height: 0
+  .stats__header
+    position: relative
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    min-height: 129px
+    &::before
+      content: ''
+      position: absolute
+      top: 27px
+      left: -15px
+      border: 15px solid transparent
+      border-bottom-color: #fff
+      transform: rotate(45deg)
+  .stats__slogan
+    margin-bottom: 18px
+    width: 240px
+    font-size: 40px
+    line-height: 40px
+    text-align: left
+    text-transform: none
+  .stats__intro
+    margin-top: 5px
+    padding-right: 47px
+    width: 210px
+    text-align: left
+  .stats__legend
+    &--top
+      display: block
+      width: 240px
+      color: rgba(0, 0, 0, 0.3)
+    &--bottom
+      display: none
+  .stats__list
+    display: flex
+    tbody
+      display: flex
+      flex-wrap: wrap
+    tr
+      padding: 25px 35px
+      padding-bottom: 28px
+      width: 250px
+    td
+      display: block
+      padding: 0
+      width: auto
+  .stats__value
+    position: relative
+    margin-bottom: 7px
+    font-size: 72px
+    line-height: 72px
+    sup
+      position: absolute
+  .stats__field
+    font-size: 20px
+    line-height: 27px
+    text-align: left
+    br
+      display: none
+@media screen and (min-width: $xl)
+  .stats
+    display: flex
+    margin-top: -160px
+    margin-bottom: 79px
+    width: 960px
+  .stats__header
+    width: 240px
+    min-height: 263px
+    &::before
+      top: 22px
+  .stats__list
+    display: flex
+    width: 640px
+  .stats__slogan
+    margin-bottom: 42px
+    width: auto
+  .stats__intro
+    margin-bottom: 32px
+    padding-right: 30px
+    width: auto
+  .stats__legend
+    &--top
+      width: auto

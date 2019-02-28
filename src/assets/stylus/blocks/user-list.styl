@@ -1,0 +1,54 @@
+@import '../partials/variables'
+.user-list
+  &__login
+    position: relative
+    display: block
+    padding: 17px 21px
+    padding-left: 49px
+    line-height: 18px
+    text-decoration: none
+    color: $white-color
+  .user-login
+    fill: white
+    stroke: none
+    position: absolute
+    top: 17px
+    left: 21px
+    width: 16px
+    height: 16px
+    opacity: 0.3
+  @media screen and (min-width: $md)
+    width: 60px
+  @media screen and (min-width: $xl)
+    width: 160px
+@media screen and (min-width: $md)
+  .user-list
+    &__login
+      padding: 0
+      width: 60px
+      height: 70px
+      font-size: 0
+      .user-login
+        top: 29px
+        left: 12px
+        opacity: 1
+@media screen and (min-width: $xl)
+  .user-list
+    max-width: 160px
+    width: auto
+    &__login
+      position: relative
+      width: auto
+      height: auto
+      padding: 25px 30px 23px 50px
+      font-size: 18px
+      line-height: 24px
+      font-weight: bold
+      text-transform: uppercase
+      text-decoration: none
+      &:hover
+        color: #000
+        background: #fff
+      &:active
+        color: rgba(0, 0, 0, 0.3)
+        background: #fff

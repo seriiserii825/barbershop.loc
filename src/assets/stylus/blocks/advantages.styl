@@ -1,0 +1,114 @@
+@import '../partials/variables'
+.advantages
+	position: relative
+	color: white-color
+	background: black-lighter-color
+	&::after
+		content: ''
+		position: absolute
+		bottom: -68px
+		left: 0
+		right: 0
+		display: block
+		height: 0
+		border: 34px solid transparent
+		border-top-color: black-lighter-color
+		border-left-width: 140px
+		border-right-width: 140px
+		@media screen and (min-width: md)
+			display: none
+.advantages_relative
+	position: relative
+	&::after
+		@media screen and (min-width: md)
+			content: ''
+			position: absolute
+			bottom: -40px
+			left: 0
+			right: 0
+			display: block
+			height: 40px
+			background: linear-gradient(to right top, transparent 49.5%, #353535 50%) left / 50.025% 100% no-repeat, linear-gradient(to left top, transparent 49.5%, #353535 50%) right / 50.025% 100% no-repeat
+			z-index: 1000
+		@media screen and (min-width: xl)
+			bottom: -38px
+.advantages_item
+	padding-top: 28px
+.advantages_icon
+	display: table
+	margin: 0 auto 34px
+	width: 95px
+	height: 94px
+.advantages_img
+	display: inline-block
+	vertical-align: middle
+.advantages_title
+	font-size: 30px
+	text-transform: uppercase
+	text-align: center
+	color: #f7f4f1
+.advantages_description
+	margin: 0 auto 30px
+	width: 228px
+	font-size: 20px
+	font-weight: 400
+	line-height: 27px
+	text-align: center
+	color: #f7f7f7
+.slick-dots
+	margin-bottom: 20px
+	z-index: 1000
+	li
+		width: 5px
+		height: 5px
+		background: transparent
+		border: 1px solid #fff
+		transform: rotate(45deg)
+		&.slick-active
+			background: #fff
+		button
+			display: none
+@media screen and (min-width: md)
+	.advantages
+		position: relative
+		width: 640px
+		background: #353535
+	.advantages_list
+		padding: 0 30px
+	.advantages_item
+		display: flex
+		justify-content: space-between
+		border-bottom: 1px solid #494949
+		&:last-child
+			border: none
+	.advantages_icon
+		margin: 0
+		margin-right: 34px
+	.advantages_title
+		margin-bottom: 14px
+		line-height: 1
+		text-align: left
+	.advantages_description
+		width: auto
+		text-align: left
+@media screen and (min-width: xl)
+	.advantages
+		width: 960px
+	.advantages_list
+		display: flex
+		justify-content: space-between
+	.advantages_item
+		display: block
+		flex-grow: 1
+		padding: 0 45px
+		border: none
+		border-right: 1px solid #494949
+		&:last-child
+			border: none
+	.advantages_icon
+		display: table
+		margin: 0 auto 34px
+	.advantages_title
+		text-align: center
+	.advantages_description
+		text-align: center

@@ -2,8 +2,10 @@
 
 let gulp = require('gulp'),
   //css
-  sass = require('gulp-sass'),
-  stylelint = require("stylelint"),
+  stylus = require('gulp-stylus'),
+  stylint = require('gulp-stylint'),
+  // sass = require('gulp-sass'),
+  // stylelint = require("stylelint"),
   autoprefixer = require("gulp-autoprefixer"),
   sourcemaps = require('gulp-sourcemaps'),
   wait = require('gulp-wait'),
@@ -86,25 +88,23 @@ gulp.task('pug', function () {
   // .pipe(gp.notify("Change html"));
 });
 
-//=======================
 
 gulp.task("css", function () {
-  return gulp.src('src/assets/sass/style.scss')
+  return gulp.src('src/assets/stylus/style.styl')
     .pipe(gp.plumber())
     .pipe(gp.sourcemaps.init())
     .pipe(gp.wait(500))
-    .pipe(sass({
-      outputStyle: 'expanded'
-    }).on('error', notify.onError(function (error) {
-      return 'An error occurred while compiling sass.\nLook in the console for details.\n' + error;
-    })))
+    .pipe(stylint({config: '.stylintrc'}))
+    .pipe(gp.debug({title: "stylus"}))
+		.pipe(stylint.reporter())
+    .pipe(stylus())
     .pipe(gp.autoprefixer({
       cascade: false
     }))
-    .pipe(gulp.dest('build/assets/css/'))
-    .pipe(gp.csso())
-    .pipe(gp.rename("style.min.css"))
-    .pipe(gp.sourcemaps.write())
+    // .pipe(gulp.dest('build/assets/css/'))
+    // .pipe(gp.csso())
+    // .pipe(gp.rename("style.min.css"))
+    .pipe(gp.sourcemaps.write('.'))
     .pipe(gulp.dest('build/assets/css/'))
     .pipe(browserSync.reload({
       stream: true
@@ -173,11 +173,11 @@ gulp.task("image", function () {
   return gulp.src('src/assets/i/**/*.*', {since: gulp.lastRun('image')})
     .pipe(gp.newer('build/assets/i'))
     .pipe(gp.debug({title: "image"}))
-    .pipe(gp.imagemin([
-      imagemin.optipng({optimizationLevel: 3}),
-      imagemin.jpegtran({progressive: true}),
-      imagemin.svgo(),
-    ]))
+    // .pipe(gp.imagemin([
+    //   imagemin.optipng({optimizationLevel: 3}),
+    //   imagemin.jpegtran({progressive: true}),
+    //   imagemin.svgo(),
+    // ]))
     .pipe(gulp.dest('build/assets/i'))
     .pipe(browserSync.reload({
       stream: true
@@ -216,7 +216,7 @@ gulp.task('default', gulp.series(
     'pug',
     'css',
     'js',
-    'webp',
+    // 'webp',
     'svg',
     'fonts',
     'image',

@@ -1,0 +1,78 @@
+// @import "../libs/reset/reset.scss"
+@import 'partials/fonts'
+@import 'partials/variables'
+@import 'partials/mixins'
+@import '../libs/slick/slick'
+body
+	background: body-bg
+	color: text-color
+	ptsans()
+	font-size: 18px
+	margin: 0
+	padding: 0
+ul
+	reset-list()
+img
+	max-width: 100%
+	height: auto
+.hidden
+	display: none
+h1,
+h2,
+h3,
+h4,
+h5,
+h6
+	font-weight: bold
+	margin: 0
+	padding: 0
+a
+	text-decoration: none
+	&:hover,
+	&:focus
+		text-decoration: none
+.visually-hidden:not(:focus):not(:active)
+	position: absolute
+	margin: -1px
+	padding: 0
+	width: 1px
+	height: 1px
+	display: none
+	white-space: normal
+	border: 0
+	clip-path: inset(100%)
+	clip: rect(0 0 0 0)
+	overflow: hidden
+.container
+	margin: 0 auto
+	padding: 0 20px
+	width: 280px
+	@media screen and (min-width: md)
+		padding: 0 65px
+		width: 640px
+	@media screen and (min-width: xl)
+		margin: 0 auto
+		padding: 0 120px
+		width: 960px
+@import 'blocks/button'
+@import 'blocks/section-header'
+@import 'blocks/page-header'
+@import 'blocks/main-nav'
+@import 'blocks/site-list'
+@import 'blocks/user-list'
+@import 'blocks/stats'
+@import 'blocks/advantages'
+@import 'blocks/news'
+@import 'blocks/reviews'
+@import 'blocks/social'
+@import 'blocks/copyright'
+@import 'blocks/after-header'
+@import 'blocks/page-form'
+@import 'blocks/choose-section'
+@import 'blocks/settings-section-header'
+@import 'blocks/services-section'
+@import 'blocks/our-works'
+@import 'blocks/price-list'
+@import 'blocks/price-table'
+@import 'blocks/clock'
+@import 'blocks/footer'

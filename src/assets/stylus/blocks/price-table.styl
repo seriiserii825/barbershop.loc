@@ -1,0 +1,54 @@
+@import '../partials/variables'
+@import '../partials/mixins'
+.price-table
+  width: 100%
+  border-collapse: collapse
+  @media screen and (min-width: $md)
+    margin-bottom: 10px
+  @media screen and (min-width: $xl)
+    width: 630px
+  tbody
+    @media screen and (max-width: $md)
+      display: flex
+      flex-direction: column
+  tr
+    @media screen and (max-width: $md)
+      display: flex
+      justify-content: space-between
+      margin-bottom: 20px
+.price-table__num,
+.price-table__name,
+.price-table__description-tablet,
+.price-table__price
+  @media screen and (min-width: $md)
+    padding-top: 20px
+    padding-bottom: 20px
+    vertical-align: top
+    border: 1px solid #4a4a4a
+.price-table__num
+  @media screen and (max-width: $md)
+    display: none
+  @media screen and (min-width: $md)
+    min-width: 72px
+    text-align: center
+    vertical-align: middle
+.price-table__name
+  @media screen and (min-width: $md)
+    padding-left: 19px
+.price-table__description-tablet
+  @media screen and (max-width: $md)
+    display: none
+  @media screen and (min-width: $md)
+    padding-left: 20px
+.price-table__haircut
+  display: block
+  font-weight: bold
+.price-table__description
+  @media screen and (min-width: $md)
+    display: none
+.price-table__price
+  @media screen and (max-width: $md)
+    vertical-align: top
+    text-align: right
+  @media screen and (min-width: $md)
+    padding-left: 21px

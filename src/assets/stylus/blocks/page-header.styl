@@ -1,14 +1,14 @@
-@import "../partials/_variables.scss";
+@import "../partials/variables";
 
 .page-header {
   display: flex;
   flex-direction: column;
 
   &__logo {
-    background: $black-lighter-color;
+    background: black-lighter-color;
     padding: 29px 50px;
     text-align: center;
-    @media screen and (min-width: $md) {
+    @media screen and (min-width: md) {
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -26,17 +26,17 @@
         background-image: url("../i/page-header/header-bg-x2.jpg");
       }
     }
-    @media screen and (min-width: $xl) {
+    @media screen and (min-width: xl) {
       height: 648px;
     }
   }
 
   img {
-    @media screen and (min-width: $md) {
+    @media screen and (min-width: md) {
       width: 380px;
       height: 112px;
     }
-    @media screen and (min-width: $xl) {
+    @media screen and (min-width: xl) {
       width: 380px;
       height: 165px;
     }

@@ -1,0 +1,68 @@
+@import '../partials/variables'
+@import '../partials/mixins'
+.services-section
+  position: relative
+  background: $section-bg
+  &::after
+    @media screen and (max-width: 320px)
+      content: ''
+      position: absolute
+      bottom: -109px
+      left: -2px
+      height: 40px
+      border: 35px solid transparent
+      border-top-color: $beige-light
+      border-left-width: 160px
+      border-right-width: 160px
+.services-section__wrap
+  margin-bottom: 27px
+  @media screen and (min-width: $md)
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+  @media screen and (min-width: $xl)
+    grid-template-columns: repeat(3, 1fr)
+.services-section__item
+  margin-bottom: 20px
+  height: 36px
+  line-height: 36px
+  input[type="checkbox"]
+    display: none
+  label
+    position: relative
+    padding-left: 60px
+    &::before
+      content: ''
+      position: absolute
+      top: -6px
+      left: 0
+      width: 36px
+      height: 36px
+      border: 1px solid #e5ddd5
+    &:hover::before
+      border-color: #d5c9bd
+      cursor: pointer
+    &:active::before
+      background-color: #d5c9bd
+      background-image: url(../i/check.png)
+      background-position: center
+      background-repeat: no-repeat
+  input[type="checkbox"]:checked ~ label::after
+    content: ''
+    position: absolute
+    top: 50%
+    left: 19px
+    width: 22px
+    height: 16px
+    transform: translate(-50%, -50%)
+    background: url(../i/check.png) no-repeat center
+  input[type="checkbox"]:checked:active ~ label::after
+    background-color: #d5c9bd
+.services-section__submit
+  margin-bottom: 40px
+  color: #fff
+  background: $accent-color
+  @media screen and (min-width: $md)
+    margin-bottom: 76px
+    width: 100%
+  @media screen and (min-width: $xl)
+    margin-bottom: 87px
